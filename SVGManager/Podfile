@@ -1,0 +1,26 @@
+source 'https://github.com/CocoaPods/Specs'
+source 'http://192.168.240.26/ios/BMSpecs'
+
+platform :ios, '8.0'
+
+inhibit_all_warnings!
+target:SVGManager do
+    pod 'BMNetworkAPIManager', '2.2.4'  #蓝月亮iOS开发网络模块
+    pod 'YYCategories', '1.0.4'         #功能丰富的 Category 类型工具库。
+    pod 'BlocksKit', '2.2.5'            # Blocks工具包
+    pod 'Masonry', '1.0.2'              #约束
+    pod 'MJExtension', '3.0.13'         #MJ Model解析
+    pod 'MJRefresh', '3.1.12'           #下拉刷新
+    pod 'MBProgressHUD', '~> 1.1.0'
+    pod 'WMPageController', '2.3.0'
+    pod 'CocoaLumberjack', '~> 3.2.0'
+    pod 'IQKeyboardManager', '5.0.4'
+    
+    pod 'UICollectionView-ARDynamicHeightLayoutCell', :git => 'https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git'
+    pod 'YYCache',     '1.0.4'
+    pod 'XXNibBridge', '2.3.1'
+
+end
+
+# pod install --verbose --no-repo-update
+# pod update --verbose --no-repo-update
