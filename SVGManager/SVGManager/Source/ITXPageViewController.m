@@ -7,7 +7,8 @@
 //
 
 #import "ITXPageViewController.h"
-
+#import "FSMainViewController.h"
+#import "TwoViewController.h"
 @interface ITXPageViewController ()
 @property (nonatomic, strong) NSArray *titleData;
 @end
@@ -39,7 +40,7 @@
 
 - (NSArray *)titleData {
     if (!_titleData) {
-        _titleData = @[@"介绍", @"课件", @"评论"];
+        _titleData = @[@"最新", @"趣图", @"随机"];
     }
     return _titleData;
 }
@@ -60,6 +61,7 @@
             
             break;
         case 1: {
+//            return [[FSMainViewController alloc] init];
             return [[TwoViewController alloc] init];
         }
             
