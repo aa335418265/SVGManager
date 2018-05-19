@@ -7,7 +7,6 @@
 //
 
 #import "ITXPageViewController.h"
-#import "FSMainViewController.h"
 #import "TwoViewController.h"
 @interface ITXPageViewController ()
 @property (nonatomic, strong) NSArray *titleData;

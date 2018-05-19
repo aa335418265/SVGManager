@@ -11,15 +11,14 @@
 #import "FLAnimatedImageView+WebCache.h"
 
 
-typedef void(^ReloadCellBlock)(UITableViewCell *cell);
+typedef void(^ReloadCellBlock)(NSIndexPath *indexPath);
 
 @interface TextJokesCell : UITableViewCell
 @property(strong,nonatomic)UILabel* lb_updatetime;
 @property(strong,nonatomic)UITextView* contentTextView;
-@property(strong,nonatomic)FLAnimatedImageView* img_content;
+
 @property(strong,nonatomic)UIImageView* all_content_bg;
 
-@property (nonatomic, strong) ReloadCellBlock  reloadCellBlock; ///< <#注释#>
 
 @property(strong,nonatomic)JokesModel* model;
 

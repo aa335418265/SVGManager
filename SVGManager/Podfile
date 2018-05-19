@@ -15,7 +15,7 @@ target:SVGManager do
     pod 'CocoaLumberjack', '~> 3.2.0'
     pod 'IQKeyboardManager', '5.0.4'
     pod 'MKNetworkKit', '~> 0.87'
-    pod 'UICollectionView-ARDynamicHeightLayoutCell', :git => 'https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git'
+    #pod 'UICollectionView-ARDynamicHeightLayoutCell', :git => 'https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git'
     pod 'YYCache',     '1.0.4'
     pod 'XXNibBridge', '2.3.1'
     pod 'SDWebImage', '~> 4.0.0'

@@ -52,11 +52,6 @@
     _contentTextView.font = [UIFont systemFontOfSize:15];
     [self.contentView addSubview:_contentTextView];
     
-    //图片
-    self.img_content = [[FLAnimatedImageView alloc] initWithFrame:_contentTextView.frame];
-    _img_content.contentMode = UIViewContentModeScaleAspectFill;
-    [_img_content sizeToFit];
-    [self.contentView addSubview:_img_content];
     
     //更新时间
     self.lb_updatetime = [[UILabel alloc] initWithFrame:CGRectMake(20, 15, 300, 16)];
@@ -109,31 +104,6 @@
         _contentTextView.text = nil;
     }
     
-    if(model.url.length > 0)
-    {
-        _img_content.hidden = NO;
-        _img_content.top = lastBottom + 10;
-        
-        
-        //fenglh
-        @weakify(self);
-        [self.img_content sd_setImageWithURL:[NSURL URLWithString:model.url] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-            @strongify(self);
-            self.img_content.size = dq_sizeWithImageSize(image.size, CGSizeMake(self.width - 40, 2000));
-            
-            if (self.reloadCellBlock) {
-                self.reloadCellBlock(self);
-            }
-
-        }];
-        
-        lastBottom = _img_content.bottom;
-    }
-    else
-    {
-        _img_content.hidden = YES;
-        _img_content.image = nil;
-    }
     
     
     if(model.updatetime.length > 0)
@@ -154,18 +124,16 @@
     }
     
     
-    model.textCellHeight = lastBottom + 15;
-    _all_content_bg.height = model.textCellHeight - 10;
-    self.height = model.textCellHeight;
+    model.cellHeight = lastBottom + 15;
+    _all_content_bg.height = model.cellHeight - 10;
+    self.height = model.cellHeight;
 }
+    
+    
 +(int)cellHeightWithModel:(JokesModel *)model
 {
     int lastBottom = 5;
-    
-    if(model.publisher.length > 0)
-    {
-        lastBottom = lastBottom + 10 + 16;
-    }
+
     
     if(model.content.length > 0)
     {
@@ -173,14 +141,13 @@
         
         lastBottom = lastBottom + 10 + ceil(size.height);
     }
-    
-    if(model.image.length > 0)
-    {
-        CGSize size = dq_sizeWithImageSize(model.image.lastComponentOriginalImageSize, CGSizeMake(YYScreenSize().width - 40, 2000));
-        
-        lastBottom = lastBottom + 10 + size.height;
+    if (model.imgHeight ) {
+        lastBottom = lastBottom + 10 + model.imgHeight;
     }
-    model.textCellHeight = lastBottom + 15;
-    return model.textCellHeight;
+
+    model.cellHeight = lastBottom + 15;
+    NSLog(@"计算cell高度:%f", model.cellHeight);
+    NSLog(@"cell height :%d", model.cellHeight);
+    return model.cellHeight;
 }
 @end

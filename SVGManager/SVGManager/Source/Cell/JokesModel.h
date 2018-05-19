@@ -21,19 +21,14 @@ typedef NS_ENUM(NSUInteger, JokesModelType) {
 
 @property JokesModelType type;
 
-@property(strong,nonatomic)NSString* title;
-@property(strong,nonatomic)NSString* publisher;
-@property(strong,nonatomic)NSString* image;
+
 @property(strong,nonatomic)NSString* content;
 @property(strong,nonatomic)NSString* updatetime;
 @property(strong,nonatomic)NSString* url;
+@property (assign, nonatomic) double imgHeight;
 
-@property (nonatomic, copy, readonly) NSString *identifier;
-@property(strong,nonatomic)NSString* objectId;
-@property(strong,nonatomic)NSString* createdAt;
-@property(strong,nonatomic)NSString* updatedAt;
 @property int rowIndex;
 
-@property int textCellHeight;
-@property int imageCellHeight;
+@property int cellHeight;
+//@property int imageCellHeight;
 @end

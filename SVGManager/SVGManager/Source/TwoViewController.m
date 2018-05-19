@@ -7,9 +7,10 @@
 //
 
 #import "TwoViewController.h"
-#import "TextJokesCell.h"
+#import "ImageJokesCell.h"
 #import "UIImageView+LBBlurredImage.h"
 #import "FLAnimatedImageView+WebCache.h"
+#import "JokesModel.h"
 
 
 @interface TwoViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -32,11 +33,13 @@
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     _tableView.dataSource = self;
     _tableView.delegate = self;
+//    self.tableView.estimatedRowHeight = 100;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
     UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     self.tableView.backgroundView=bgView;
-    //    [bgView setImageToBlur:[UIImage imageNamed:@"example"] blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:^(NSError *error) {
-    //        NSLog(@"玻璃效果图片已经好了");
-    //    }];
+        [bgView setImageToBlur:[UIImage imageNamed:@"example"] blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:^(NSError *error) {
+            NSLog(@"玻璃效果图片已经好了");
+        }];
     
     //下拉刷新
     //下拉刷新
@@ -72,7 +75,7 @@
             self.models = [NSMutableArray arrayWithArray:models];
             [self.tableView reloadData];
         }
-        NSLog(@"data = %@", self.models);
+//        NSLog(@"data = %@", self.models);
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
         [self.tableView.mj_footer endRefreshing];
         NSLog(@"请求错误:%@", [error localizedDescription]);
@@ -122,35 +125,70 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    JokesModel* model = _models[indexPath.row];
-    if(model.textCellHeight < 10)
-    {
-        [TextJokesCell cellHeightWithModel:model];
+    JokesModel *model = self.models[indexPath.row];
+    UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:model.url];
+    CGFloat height =10;
+    if (image) {
+        height = image.size.height * [UIScreen mainScreen].bounds.size.width / image.size.width;
     }
-    return model.textCellHeight;
+    return height;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TextJokesCell* cell = [tableView dequeueReusableCellWithIdentifier:@"TextJokesCell"];
-    if(cell == nil)
-    {
-        cell = [[TextJokesCell alloc]init];
-        cell.backgroundColor = [UIColor clearColor];
-        cell.contentView.backgroundColor = [UIColor clearColor];
+    ImageJokesCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ImageJokesCell class])];
+    if (cell == nil) {
+        cell = [[ImageJokesCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([ImageJokesCell class])];
+//        cell.contentImageView.image = [UIImage imageNamed:@"example.png"]
     }
-    JokesModel* model = _models[indexPath.row];
-    model.publisher = @"发布者";
-    model.objectId = @"objectId";
-    model.createdAt = @"createdAt";
-    model.updatedAt = @"updatedAt";
-    
-    cell.model = model;
+    [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+
+- (void)downloadImage:(NSString *)imageURL forIndexPath:(NSIndexPath *)indexPath {
+    
+    // 利用 SDWebImage 框架提供的功能下载图片
+    
+    [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:imageURL] options:SDWebImageDownloaderUseNSURLCache progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+        
+        
+        
+    } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+        
+        if (image == nil) {
+            NSLog(@"下载图片失败:%@", imageURL);
+        }
+        [[SDImageCache sharedImageCache] storeImage:image forKey:imageURL toDisk:YES completion:^{
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.tableView reloadData];
+                
+            });
+            
+        }];
+        
+    }];
     
 }
+
+//加载图片
+
+- (void)configureCell:(ImageJokesCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    JokesModel *model = self.models[indexPath.row];
+    NSString *imgURL = model.url;
+    cell.contentLabel.text = model.content;
+    cell.updateTimeLabel.text = model.updatetime;
+    UIImage *cachedImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:imgURL];
+    if ( !cachedImage ) {
+        [self downloadImage:model.url forIndexPath:indexPath];
+    } else {
+        cell.contentImageView.image =  cachedImage;
+        
+    }
+    
+}
+
 
 #pragma mark - delegate 相关
 

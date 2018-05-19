@@ -32,9 +32,9 @@
     _tableView.delegate = self;
     UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     self.tableView.backgroundView=bgView;
-//    [bgView setImageToBlur:[UIImage imageNamed:@"example"] blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:^(NSError *error) {
-//        NSLog(@"玻璃效果图片已经好了");
-//    }];
+    [bgView setImageToBlur:[UIImage imageNamed:@"example"] blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:^(NSError *error) {
+        NSLog(@"玻璃效果图片已经好了");
+    }];
     
     //下拉刷新
     //下拉刷新
@@ -70,7 +70,7 @@
             self.models = [NSMutableArray arrayWithArray:models];
             [self.tableView reloadData];
         }
-        NSLog(@"data = %@", self.models);
+//        NSLog(@"data = %@", self.models);
     } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
         [self.tableView.mj_footer endRefreshing];
         NSLog(@"请求错误:%@", [error localizedDescription]);
@@ -121,11 +121,11 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     JokesModel* model = _models[indexPath.row];
-    if(model.textCellHeight < 10)
+    if(model.cellHeight < 10)
     {
         [TextJokesCell cellHeightWithModel:model];
     }
-    return model.textCellHeight;
+    return model.cellHeight;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -137,11 +137,6 @@
         cell.contentView.backgroundColor = [UIColor clearColor];
     }
     JokesModel* model = _models[indexPath.row];
-    model.publisher = @"发布者";
-    model.objectId = @"objectId";
-    model.createdAt = @"createdAt";
-    model.updatedAt = @"updatedAt";
-
     cell.model = model;
     return cell;
 }
