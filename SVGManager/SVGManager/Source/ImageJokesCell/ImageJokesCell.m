@@ -170,12 +170,30 @@
         [_likeBtn addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
             @strongify(self);
             self.liked = !self.liked;
+            [self scaleAnimate:self.likeBtn];
             if (self.likedClickBlock) {
                 self.likedClickBlock(self.indexPath, self.liked);
             }
+            //点赞动画
+
         }];
     }
     return _likeBtn;
+}
+
+
+- (void)scaleAnimate:(UIView *)view
+{
+    [UIView animateKeyframesWithDuration:0.5 delay:0 options:UIViewKeyframeAnimationOptionLayoutSubviews animations:^{
+        [UIView addKeyframeWithRelativeStartTime:0 relativeDuration:1/2.0 animations:^{
+            view.transform = CGAffineTransformMakeScale(1.6, 1.6);
+            
+        }];
+        [UIView addKeyframeWithRelativeStartTime:1/2.0 relativeDuration:1/2.0 animations:^{
+            view.transform = CGAffineTransformIdentity;
+        }];
+        
+    } completion:nil];
 }
 
 - (UIButton *)collectedBtn {
@@ -186,6 +204,7 @@
         @weakify(self);
         [_collectedBtn addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
             @strongify(self);
+            [self scaleAnimate:self.collectedBtn];
             self.collected = !self.collected;
             if (self.collectedClickBlock) {
                 self.collectedClickBlock(self.indexPath, self.collected);
