@@ -26,7 +26,8 @@
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
     _tableView.backgroundColor = [UIColor clearColor];
     
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+//    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     _tableView.dataSource = self;
     _tableView.delegate = self;
@@ -45,7 +46,7 @@
     
     
     [self.view addSubview:_tableView];
-    [self loadNewJokes];
+//    [self loadNewJokes];
     
     
     
@@ -138,6 +139,7 @@
     }
     JokesModel* model = _models[indexPath.row];
     cell.model = model;
+    cell.numberLabel.text = [NSString stringWithFormat:@"%d", indexPath.row + 1];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

@@ -11,6 +11,8 @@
 
 @interface ImageJokesCell : UITableViewCell
 
+
+@property (nonatomic, strong) UILabel *numberLabel;
 @property (nonatomic, strong) UILabel *contentLabel;
 @property (nonatomic, strong) UILabel *updateTimeLabel;
 @property (nonatomic, strong) FLAnimatedImageView *contentImageView;

@@ -33,13 +33,12 @@
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     _tableView.dataSource = self;
     _tableView.delegate = self;
-//    self.tableView.estimatedRowHeight = 100;
-//    self.tableView.rowHeight = UITableViewAutomaticDimension;
-    UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    self.tableView.backgroundView=bgView;
-        [bgView setImageToBlur:[UIImage imageNamed:@"example"] blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:^(NSError *error) {
-            NSLog(@"玻璃效果图片已经好了");
-        }];
+
+//    UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+//    self.tableView.backgroundView=bgView;
+//        [bgView setImageToBlur:[UIImage imageNamed:@"example"] blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:^(NSError *error) {
+//            NSLog(@"玻璃效果图片已经好了");
+//        }];
     
     //下拉刷新
     //下拉刷新
@@ -126,50 +125,32 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     JokesModel *model = self.models[indexPath.row];
-    UIImage *image = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:model.url];
-    CGFloat height =10;
+    CGFloat contentLabelHeight = [model.content heightForFont:[UIFont systemFontOfSize:14] width:self.view.width - 40];
+    UIImage *image = [[SDImageCache sharedImageCache] imageFromCacheForKey:model.url];
+    CGFloat imageHeight =120;
     if (image) {
-        height = image.size.height * [UIScreen mainScreen].bounds.size.width / image.size.width;
+        if (image.size.width > self.view.width - 10 * 4) {
+            imageHeight =  image.size.height * (self.view.width - 10 * 4) / image.size.width;
+        }else{
+            imageHeight = image.size.height;
+        }
     }
-    return height;
+    CGFloat updateLabelHeight = [model.updatetime heightForFont:[UIFont systemFontOfSize:11] width:self.view.width - 40];
+    CGFloat totalHeight = 16 + 8+ 12 + contentLabelHeight + 24 + imageHeight + 10 + updateLabelHeight +16;
+
+    return totalHeight  ;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ImageJokesCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ImageJokesCell class])];
     if (cell == nil) {
         cell = [[ImageJokesCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([ImageJokesCell class])];
-//        cell.contentImageView.image = [UIImage imageNamed:@"example.png"]
     }
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
-- (void)downloadImage:(NSString *)imageURL forIndexPath:(NSIndexPath *)indexPath {
-    
-    // 利用 SDWebImage 框架提供的功能下载图片
-    
-    [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:[NSURL URLWithString:imageURL] options:SDWebImageDownloaderUseNSURLCache progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-        
-        
-        
-    } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
-        
-        if (image == nil) {
-            NSLog(@"下载图片失败:%@", imageURL);
-        }
-        [[SDImageCache sharedImageCache] storeImage:image forKey:imageURL toDisk:YES completion:^{
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                
-                [self.tableView reloadData];
-                
-            });
-            
-        }];
-        
-    }];
-    
-}
+
 
 //加载图片
 
@@ -179,13 +160,21 @@
     NSString *imgURL = model.url;
     cell.contentLabel.text = model.content;
     cell.updateTimeLabel.text = model.updatetime;
-    UIImage *cachedImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:imgURL];
-    if ( !cachedImage ) {
-        [self downloadImage:model.url forIndexPath:indexPath];
-    } else {
-        cell.contentImageView.image =  cachedImage;
-        
-    }
+    cell.numberLabel.text = [NSString stringWithFormat:@"%d", indexPath.row + 1];
+    @weakify(self);
+    
+    [cell.contentImageView sd_setImageWithURL:[NSURL URLWithString:imgURL] placeholderImage:[UIImage imageNamed:@"placeholder.png"]  completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+        @strongify(self);
+        if (cacheType == SDImageCacheTypeNone) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        }
+
+
+    }];
+
+
     
 }
 

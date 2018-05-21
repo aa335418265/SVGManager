@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ITXPageViewController.h"
+#import <UIViewController+MMDrawerController.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property(nonatomic,strong) MMDrawerController * drawerController;
+@property (nonatomic, strong) ITXPageViewController *centerVC;
 
 @end
 

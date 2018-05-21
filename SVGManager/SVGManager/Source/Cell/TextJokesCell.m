@@ -25,13 +25,28 @@
     }
     return self;
 }
+
+- (UILabel *)numberLabel
+{
+    if (_numberLabel == nil) {
+        _numberLabel = [[UILabel alloc] init];
+        _numberLabel.backgroundColor = [UIColor colorWithRed:253/255.0 green:239/255.0 blue:107/255.0 alpha:0.2];
+        _numberLabel.textColor = [UIColor lightGrayColor];;
+        _numberLabel.numberOfLines = 1;
+//        _numberLabel.clipsToBounds = YES;
+        _numberLabel.textAlignment = NSTextAlignmentCenter;
+        _numberLabel.font = [UIFont systemFontOfSize:12];
+    }
+    return _numberLabel;
+}
+
 -(void)awakeFromNib
 {
     [super awakeFromNib];
     self.size = CGSizeMake(YYScreenSize().width, 44);
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    
+
     //背景
 
     self.all_content_bg = [[UIImageView alloc] initWithFrame:CGRectMake(10, 5, self.width - 20, self.height - 10)];
@@ -42,22 +57,28 @@
     [self.contentView addSubview:_all_content_bg];
 
     
+    self.numberLabel.frame= CGRectMake(self.all_content_bg.width - 40 , 0, 40, 20);
+    [self.all_content_bg addSubview:self.numberLabel];
+    
+    
 
     //文本
-    self.contentTextView = [[UITextView alloc]initWithFrame:CGRectMake(20, 15, self.width - 40, self.height - 30)];
+    self.contentTextView = [[UITextView alloc]initWithFrame:CGRectMake(10, 15, self.all_content_bg.width - 20, self.height - 30)];
     self.contentTextView.scrollEnabled = NO;
     self.contentTextView.editable = NO;
+    [self.contentTextView NightWithType:UIViewColorTypeNormal];
+//    [self.contentTextView NightTextType:LabelColorGray];
     _contentTextView.backgroundColor = [UIColor clearColor];
 
     _contentTextView.font = [UIFont systemFontOfSize:15];
-    [self.contentView addSubview:_contentTextView];
+    [self.all_content_bg addSubview:_contentTextView];
     
     
     //更新时间
-    self.lb_updatetime = [[UILabel alloc] initWithFrame:CGRectMake(20, 15, 300, 16)];
+    self.lb_updatetime = [[UILabel alloc] initWithFrame:CGRectMake(10, 15, 300, 16)];
     _lb_updatetime.font = [UIFont systemFontOfSize:11];
     _lb_updatetime.backgroundColor = [UIColor clearColor];
-    [self.contentView addSubview:_lb_updatetime];
+    [self.all_content_bg addSubview:_lb_updatetime];
     
     [self appThemeDidChanged];
 }

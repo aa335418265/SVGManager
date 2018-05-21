@@ -16,7 +16,7 @@ typedef void(^ReloadCellBlock)(NSIndexPath *indexPath);
 @interface TextJokesCell : UITableViewCell
 @property(strong,nonatomic)UILabel* lb_updatetime;
 @property(strong,nonatomic)UITextView* contentTextView;
-
+@property (nonatomic, strong) UILabel *numberLabel;
 @property(strong,nonatomic)UIImageView* all_content_bg;
 
 
