@@ -136,7 +136,7 @@
         }
     }
     CGFloat updateLabelHeight = [model.updatetime heightForFont:[UIFont systemFontOfSize:11] width:self.view.width - 40];
-    CGFloat totalHeight = 16 + 8+ 12 + contentLabelHeight + 24 + imageHeight + 10 + updateLabelHeight +16;
+    CGFloat totalHeight = 16 + 8+ 12 + contentLabelHeight + 24 + imageHeight + 24 + updateLabelHeight +24 + 16;
 
     return totalHeight  ;
 }
@@ -152,7 +152,7 @@
 
 
 
-//加载图片
+
 
 - (void)configureCell:(ImageJokesCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
@@ -161,21 +161,35 @@
     cell.contentLabel.text = model.content;
     cell.updateTimeLabel.text = model.updatetime;
     cell.numberLabel.text = [NSString stringWithFormat:@"%d", indexPath.row + 1];
+    cell.indexPath = indexPath;
+    cell.liked = [[JokesManager sharedInstance] isLikedHashId:model.hashId];
+    cell.collected = [[JokesManager sharedInstance] isColletedHashId:model.hashId];
+    cell.likedClickBlock = ^(NSIndexPath *indexPath, BOOL liked) {
+        JokesModel *model = self.models[indexPath.row];
+        [[JokesManager sharedInstance] likeModel:model liked:liked];
+    };
+    cell.collectedClickBlock = ^(NSIndexPath *indexPath, BOOL collected) {
+        JokesModel *model = self.models[indexPath.row];
+        [[JokesManager sharedInstance] colletedModel:model collected:collected];
+        if (collected) {
+            [BMShowHUD showMessage:@"收藏成功"];
+        }else{
+            [BMShowHUD showMessage:@"您取消了收藏"];
+        }
+    };
     @weakify(self);
     
-    [cell.contentImageView sd_setImageWithURL:[NSURL URLWithString:imgURL] placeholderImage:[UIImage imageNamed:@"placeholder.png"]  completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        @strongify(self);
-        if (cacheType == SDImageCacheTypeNone) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.tableView reloadData];
-            });
-        }
+    if (imgURL) {
+        [cell.contentImageView sd_setImageWithURL:[NSURL URLWithString:imgURL] placeholderImage:[UIImage imageNamed:@"placeholder.png"]  completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            @strongify(self);
+            if (cacheType == SDImageCacheTypeNone) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableView reloadData];
+                });
+            }
+        }];
+    }
 
-
-    }];
-
-
-    
 }
 
 

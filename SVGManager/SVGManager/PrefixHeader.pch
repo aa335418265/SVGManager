@@ -26,6 +26,8 @@
 #import <MJRefresh.h>
 #import <YYCache.h>
 #import "UIView+ThemeChange.h"
+#import "JokesManager.h"
+#import "BMShowHUD.h"
 
 #ifndef weakify
 #if DEBUG

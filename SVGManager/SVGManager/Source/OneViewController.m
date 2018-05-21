@@ -7,9 +7,9 @@
 //
 
 #import "OneViewController.h"
-#import "TextJokesCell.h"
 #import "UIImageView+LBBlurredImage.h"
-
+#import "JokesModel.h"
+#import "ImageJokesCell.h"
 @interface OneViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(strong,nonatomic)UITableView* tableView;
 @property(strong,nonatomic)NSMutableArray* models;
@@ -31,11 +31,12 @@
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     _tableView.dataSource = self;
     _tableView.delegate = self;
-    UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    self.tableView.backgroundView=bgView;
-    [bgView setImageToBlur:[UIImage imageNamed:@"example"] blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:^(NSError *error) {
-        NSLog(@"玻璃效果图片已经好了");
-    }];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+//    self.tableView.backgroundView=bgView;
+//    [bgView setImageToBlur:[UIImage imageNamed:@"example"] blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:^(NSError *error) {
+//        NSLog(@"玻璃效果图片已经好了");
+//    }];
     
     //下拉刷新
     //下拉刷新
@@ -46,7 +47,7 @@
     
     
     [self.view addSubview:_tableView];
-//    [self loadNewJokes];
+    [self loadNewJokes];
     
     
     
@@ -115,44 +116,76 @@
 #pragma mark - 公有方法
 
 #pragma mark - tableView 相关
+
+#pragma mark - tableView 相关
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return _models.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    JokesModel* model = _models[indexPath.row];
-    if(model.cellHeight < 10)
-    {
-        [TextJokesCell cellHeightWithModel:model];
-    }
-    return model.cellHeight;
+    JokesModel *model = self.models[indexPath.row];
+    CGFloat contentLabelHeight = [model.content heightForFont:[UIFont systemFontOfSize:14] width:self.view.width - 40];
+
+    CGFloat updateLabelHeight = [model.updatetime heightForFont:[UIFont systemFontOfSize:11] width:self.view.width - 40];
+    CGFloat totalHeight = 16 + 8+ 12 + contentLabelHeight +  10 + updateLabelHeight +16 + 16;
+    
+    return totalHeight  ;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TextJokesCell* cell = [tableView dequeueReusableCellWithIdentifier:@"TextJokesCell"];
-    if(cell == nil)
-    {
-        cell = [[TextJokesCell alloc]init];
-        cell.backgroundColor = [UIColor clearColor];
-        cell.contentView.backgroundColor = [UIColor clearColor];
+    ImageJokesCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ImageJokesCell class])];
+    if (cell == nil) {
+        cell = [[ImageJokesCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([ImageJokesCell class])];
     }
-    JokesModel* model = _models[indexPath.row];
-    cell.model = model;
-    cell.numberLabel.text = [NSString stringWithFormat:@"%d", indexPath.row + 1];
+    [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+
+
+
+
+
+- (void)configureCell:(ImageJokesCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    
+    JokesModel *model = self.models[indexPath.row];
+    NSString *imgURL = model.url;
+    cell.contentLabel.text = model.content;
+    cell.updateTimeLabel.text = model.updatetime;
+    cell.numberLabel.text = [NSString stringWithFormat:@"%d", indexPath.row + 1];
+    cell.indexPath = indexPath;
+
+    cell.liked = [[JokesManager sharedInstance] isLikedHashId:model.hashId];
+    cell.collected = [[JokesManager sharedInstance] isColletedHashId:model.hashId];
+
+    cell.likedClickBlock = ^(NSIndexPath *indexPath, BOOL liked) {
+        JokesModel *model = self.models[indexPath.row];
+        [[JokesManager sharedInstance] likeModel:model liked:liked];
+    };
+    cell.collectedClickBlock = ^(NSIndexPath *indexPath, BOOL collected) {
+        JokesModel *model = self.models[indexPath.row];
+        [[JokesManager sharedInstance] colletedModel:model collected:collected];
+        if (collected) {
+            [BMShowHUD showMessage:@"收藏成功"];
+        }else{
+            [BMShowHUD showMessage:@"您取消了收藏"];
+        }
+    };
+    @weakify(self);
+    if (imgURL) {
+        [cell.contentImageView sd_setImageWithURL:[NSURL URLWithString:imgURL] placeholderImage:[UIImage imageNamed:@"placeholder.png"]  completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+            @strongify(self);
+            if (cacheType == SDImageCacheTypeNone) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableView reloadData];
+                });
+            }
+        }];
+    }
 
 }
 
-#pragma mark - delegate 相关
 
-#pragma mark - 事件响应
 
-#pragma mark - getters setters
-
-#pragma mark - 接口相关
 
 @end

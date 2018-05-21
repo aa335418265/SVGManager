@@ -22,13 +22,10 @@ typedef NS_ENUM(NSUInteger, JokesModelType) {
 @property JokesModelType type;
 
 
+@property(strong,nonatomic)NSString* hashId;
 @property(strong,nonatomic)NSString* content;
 @property(strong,nonatomic)NSString* updatetime;
 @property(strong,nonatomic)NSString* url;
-@property (assign, nonatomic) double imgHeight;
 
-@property int rowIndex;
-
-@property int cellHeight;
 //@property int imageCellHeight;
 @end

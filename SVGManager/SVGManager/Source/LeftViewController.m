@@ -62,7 +62,7 @@
         cell.iconImageView.image = [UIImage imageNamed:@"night"];
         cell.switchBtn.hidden = NO;
     }else if (indexPath.row == 1){
-        cell.iconImageView.image = [UIImage imageNamed:@"collected"];
+        cell.iconImageView.image = [UIImage imageNamed:@"mycollected"];
 
     }else if (indexPath.row == 2){
         cell.iconImageView.image = [UIImage imageNamed:@"cache"];

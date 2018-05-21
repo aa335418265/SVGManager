@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) UIImageView *bgImageView;
 
+@property (nonatomic, strong) UIButton *likeBtn;
+@property (nonatomic, strong) UIButton *collectedBtn;
 @end
 @implementation ImageJokesCell
 
@@ -26,13 +28,20 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.clipsToBounds = YES;
         
+
         self.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.bgImageView];
         [self.bgImageView addSubview:self.numberLabel];
         [self.bgImageView addSubview:self.contentLabel];
         [self.bgImageView addSubview:self.contentImageView];
+        [self.bgImageView addSubview:self.likeBtn];
+        [self.bgImageView addSubview:self.collectedBtn];
+        
         [self.bgImageView addSubview:self.updateTimeLabel];
+        self.bgImageView.userInteractionEnabled = YES;
+        
         self.bgImageView.layer.cornerRadius = 2.f;
         self.bgImageView.clipsToBounds = YES;
         
@@ -61,9 +70,22 @@
             make.top.mas_equalTo(self.contentLabel.mas_bottom).offset(24);
             make.left.mas_equalTo(10);
         }];
+        
+        [self.collectedBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(-10);
+            make.width.height.mas_equalTo(20);
+            make.bottom.mas_equalTo(-16);
+        }];
+        
+        [self.likeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(self.collectedBtn.mas_left).offset(-24);
+            make.width.height.mas_equalTo(20);
+            make.bottom.mas_equalTo(-16);
+        }];
+        
         [self.updateTimeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.contentImageView.mas_bottom).offset(10);
             make.left.mas_equalTo(10);
+            make.bottom.mas_equalTo(-16);
         }];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
@@ -80,9 +102,7 @@
 
 - (FLAnimatedImageView *)contentImageView {
     if (nil == _contentImageView) {
-        
         _contentImageView = [[FLAnimatedImageView alloc] init];
-        _contentImageView.userInteractionEnabled = NO;
         
     }
     
@@ -94,8 +114,8 @@
     if (_numberLabel == nil) {
         _numberLabel = [[UILabel alloc] init];
 //        _numberLabel.backgroundColor = [UIColor colorWithRed:253/255.0 green:239/255.0 blue:107/255.0 alpha:0.2];
-        _numberLabel.backgroundColor = [UIColor colorWithRed:253/255.0 green:239/255.0 blue:107/255.0 alpha:0.8];
-        _numberLabel.textColor = [UIColor grayColor];
+        _numberLabel.backgroundColor = [UIColor colorWithRed:253/255.0 green:239/255.0 blue:107/255.0 alpha:0.2];
+        _numberLabel.textColor = [UIColor lightGrayColor];;
         _numberLabel.numberOfLines = 1;
         _numberLabel.textAlignment = NSTextAlignmentCenter;
         _numberLabel.font = [UIFont systemFontOfSize:12];
@@ -121,5 +141,57 @@
         _updateTimeLabel.font = [UIFont systemFontOfSize:11];
     }
     return _updateTimeLabel;
+}
+
+
+- (void)setLiked:(BOOL)liked {
+    self.likeBtn.selected = liked;
+}
+
+- (void)setCollected:(BOOL)collected {
+    self.collectedBtn.selected = collected;
+}
+
+- (BOOL)liked{
+    return self.likeBtn.selected;
+}
+
+- (BOOL)collected {
+    return self.collectedBtn.selected;
+}
+
+- (UIButton *)likeBtn {
+    if (_likeBtn == nil) {
+        _likeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_likeBtn setBackgroundImage:[UIImage imageNamed:@"unliked"] forState:UIControlStateNormal];
+        [_likeBtn setBackgroundImage:[UIImage imageNamed:@"liked"] forState:UIControlStateSelected];
+        @weakify(self);
+        
+        [_likeBtn addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
+            @strongify(self);
+            self.liked = !self.liked;
+            if (self.likedClickBlock) {
+                self.likedClickBlock(self.indexPath, self.liked);
+            }
+        }];
+    }
+    return _likeBtn;
+}
+
+- (UIButton *)collectedBtn {
+    if (_collectedBtn == nil) {
+        _collectedBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_collectedBtn setBackgroundImage:[UIImage imageNamed:@"uncollected"] forState:UIControlStateNormal];
+        [_collectedBtn setBackgroundImage:[UIImage imageNamed:@"collected"] forState:UIControlStateSelected];
+        @weakify(self);
+        [_collectedBtn addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
+            @strongify(self);
+            self.collected = !self.collected;
+            if (self.collectedClickBlock) {
+                self.collectedClickBlock(self.indexPath, self.collected);
+            }
+        }];
+    }
+    return _collectedBtn;
 }
 @end
