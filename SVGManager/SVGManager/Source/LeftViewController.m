@@ -39,7 +39,7 @@
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-    self.data = @[@"夜间模式",
+    self.data = @[
                   @"我的收藏",
                   @"缓存清理",
                   @"关于我们"];
@@ -74,16 +74,13 @@
         cell.switchBtn.hidden = YES;
         cell.backgroundColor = [UIColor clearColor];
     }
-    if (indexPath.row == 0) {
-        cell.iconImageView.image = [UIImage imageNamed:@"night"];
-        cell.switchBtn.hidden = NO;
-    }else if (indexPath.row == 1){
+    if (indexPath.row == 0){
         cell.iconImageView.image = [UIImage imageNamed:@"mycollected"];
 
-    }else if (indexPath.row == 2){
+    }else if (indexPath.row == 1){
         cell.iconImageView.image = [UIImage imageNamed:@"cache"];
 
-    }else if (indexPath.row == 3){
+    }else if (indexPath.row == 2){
         cell.iconImageView.image = [UIImage imageNamed:@"about"];
         
     }
@@ -95,15 +92,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [delegate.drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
-        if (indexPath.row == 1) {
+        if (indexPath.row == 0) {
             MyCollectedViewController *vc = [[MyCollectedViewController alloc] init];
             [delegate.centerVC.navigationController pushViewController:vc animated:YES];
         }
-        else if (indexPath.row == 2) {
+        else if (indexPath.row == 1) {
             CelanCacheViewController *vc = [[CelanCacheViewController alloc] init];
             [delegate.centerVC.navigationController pushViewController:vc animated:YES];
         }
-        else if (indexPath.row == 3) {
+        else if (indexPath.row == 2) {
             AboutUsViewController *vc = [[AboutUsViewController alloc] init];
             [delegate.centerVC.navigationController pushViewController:vc animated:YES];
         }
