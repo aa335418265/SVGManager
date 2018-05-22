@@ -29,7 +29,6 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"light"] style:UIBarButtonItemStylePlain target:self action:@selector(rightBtn)];
      self.navigationItem.rightBarButtonItem.tintColor = [UIColor blackColor];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor blackColor];
-
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:ThemeManageChangeNotification object:nil];
     
 }

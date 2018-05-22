@@ -39,6 +39,18 @@
 		365C1AE420B3FD7F00CF7DFA /* collected2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AE320B3FD7F00CF7DFA /* collected2@3x.png */; };
 		365C1AE620B3FE0400CF7DFA /* uncollected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AE520B3FE0400CF7DFA /* uncollected@3x.png */; };
 		365C1AE820B3FE2100CF7DFA /* collected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AE720B3FE2100CF7DFA /* collected@3x.png */; };
+		365C1AF920B412CA00CF7DFA /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AEC20B412CA00CF7DFA /* back@2x.png */; };
+		365C1AFA20B412CA00CF7DFA /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AED20B412CA00CF7DFA /* back@3x.png */; };
+		365C1AFB20B412CA00CF7DFA /* clear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AEE20B412CA00CF7DFA /* clear@2x.png */; };
+		365C1AFC20B412CA00CF7DFA /* clear@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AEF20B412CA00CF7DFA /* clear@3x.png */; };
+		365C1AFD20B412CA00CF7DFA /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AF020B412CA00CF7DFA /* home@2x.png */; };
+		365C1AFE20B412CA00CF7DFA /* home@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AF120B412CA00CF7DFA /* home@3x.png */; };
+		365C1AFF20B412CA00CF7DFA /* next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AF220B412CA00CF7DFA /* next@2x.png */; };
+		365C1B0020B412CA00CF7DFA /* next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AF320B412CA00CF7DFA /* next@3x.png */; };
+		365C1B0120B412CA00CF7DFA /* refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AF420B412CA00CF7DFA /* refresh@2x.png */; };
+		365C1B0220B412CA00CF7DFA /* refresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AF520B412CA00CF7DFA /* refresh@3x.png */; };
+		365C1B0320B412CA00CF7DFA /* W20WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 365C1AF720B412CA00CF7DFA /* W20WebVC.m */; };
+		365C1B0420B412CA00CF7DFA /* W20WebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AF820B412CA00CF7DFA /* W20WebVC.xib */; };
 		36ADA24620AD1F37005E5F6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA24520AD1F37005E5F6E /* AppDelegate.m */; };
 		36ADA24E20AD1F39005E5F6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ADA24D20AD1F39005E5F6E /* Assets.xcassets */; };
 		36ADA25120AD1F39005E5F6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36ADA24F20AD1F39005E5F6E /* LaunchScreen.storyboard */; };
@@ -98,6 +110,19 @@
 		365C1AE320B3FD7F00CF7DFA /* collected2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collected2@3x.png"; sourceTree = "<group>"; };
 		365C1AE520B3FE0400CF7DFA /* uncollected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uncollected@3x.png"; sourceTree = "<group>"; };
 		365C1AE720B3FE2100CF7DFA /* collected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "collected@3x.png"; sourceTree = "<group>"; };
+		365C1AEC20B412CA00CF7DFA /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		365C1AED20B412CA00CF7DFA /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
+		365C1AEE20B412CA00CF7DFA /* clear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clear@2x.png"; sourceTree = "<group>"; };
+		365C1AEF20B412CA00CF7DFA /* clear@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clear@3x.png"; sourceTree = "<group>"; };
+		365C1AF020B412CA00CF7DFA /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
+		365C1AF120B412CA00CF7DFA /* home@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@3x.png"; sourceTree = "<group>"; };
+		365C1AF220B412CA00CF7DFA /* next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@2x.png"; sourceTree = "<group>"; };
+		365C1AF320B412CA00CF7DFA /* next@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "next@3x.png"; sourceTree = "<group>"; };
+		365C1AF420B412CA00CF7DFA /* refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh@2x.png"; sourceTree = "<group>"; };
+		365C1AF520B412CA00CF7DFA /* refresh@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh@3x.png"; sourceTree = "<group>"; };
+		365C1AF620B412CA00CF7DFA /* W20WebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W20WebVC.h; sourceTree = "<group>"; };
+		365C1AF720B412CA00CF7DFA /* W20WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = W20WebVC.m; sourceTree = "<group>"; };
+		365C1AF820B412CA00CF7DFA /* W20WebVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = W20WebVC.xib; sourceTree = "<group>"; };
 		36ADA24120AD1F37005E5F6E /* SVGManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVGManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ADA24420AD1F37005E5F6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36ADA24520AD1F37005E5F6E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -231,6 +256,26 @@
 			path = BMShowHUD;
 			sourceTree = "<group>";
 		};
+		365C1AEB20B412CA00CF7DFA /* W20Web */ = {
+			isa = PBXGroup;
+			children = (
+				365C1AEC20B412CA00CF7DFA /* back@2x.png */,
+				365C1AED20B412CA00CF7DFA /* back@3x.png */,
+				365C1AEE20B412CA00CF7DFA /* clear@2x.png */,
+				365C1AEF20B412CA00CF7DFA /* clear@3x.png */,
+				365C1AF020B412CA00CF7DFA /* home@2x.png */,
+				365C1AF120B412CA00CF7DFA /* home@3x.png */,
+				365C1AF220B412CA00CF7DFA /* next@2x.png */,
+				365C1AF320B412CA00CF7DFA /* next@3x.png */,
+				365C1AF420B412CA00CF7DFA /* refresh@2x.png */,
+				365C1AF520B412CA00CF7DFA /* refresh@3x.png */,
+				365C1AF620B412CA00CF7DFA /* W20WebVC.h */,
+				365C1AF720B412CA00CF7DFA /* W20WebVC.m */,
+				365C1AF820B412CA00CF7DFA /* W20WebVC.xib */,
+			);
+			path = W20Web;
+			sourceTree = "<group>";
+		};
 		36ADA23820AD1F37005E5F6E = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +326,7 @@
 		36ADA26920AD730E005E5F6E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				365C1AEB20B412CA00CF7DFA /* W20Web */,
 				365C1AD320B2CE1200CF7DFA /* BMShowHUD */,
 				365C1AD220B2B9FA00CF7DFA /* JokesManager */,
 				365C1AC320B2A6CA00CF7DFA /* BMXIBSeparatorView */,
@@ -430,25 +476,36 @@
 			files = (
 				365C1A9720B2939500CF7DFA /* search@3x.png in Resources */,
 				365C1AE020B3EDAA00CF7DFA /* light@3x.png in Resources */,
+				365C1B0120B412CA00CF7DFA /* refresh@2x.png in Resources */,
+				365C1B0020B412CA00CF7DFA /* next@3x.png in Resources */,
 				36ADA25120AD1F39005E5F6E /* LaunchScreen.storyboard in Resources */,
 				365C1AB420B2A35000CF7DFA /* AboutUsViewController.xib in Resources */,
 				365C1A9520B292B400CF7DFA /* menu2@3x.png in Resources */,
+				365C1AFD20B412CA00CF7DFA /* home@2x.png in Resources */,
 				365C1AE420B3FD7F00CF7DFA /* collected2@3x.png in Resources */,
+				365C1AFF20B412CA00CF7DFA /* next@2x.png in Resources */,
 				365C1AC020B2A3A100CF7DFA /* CelanCacheViewController.xib in Resources */,
 				36C4988B20AEC237002AA358 /* example.png in Resources */,
 				365C1A9320B2926600CF7DFA /* menu@3x.png in Resources */,
+				365C1B0420B412CA00CF7DFA /* W20WebVC.xib in Resources */,
 				36ADA24E20AD1F39005E5F6E /* Assets.xcassets in Resources */,
 				365C1A8120B26CE300CF7DFA /* placeholder@3x.png in Resources */,
 				365C1AC220B2A5D400CF7DFA /* jiantou@3x.png in Resources */,
 				365C1ACD20B2B5AF00CF7DFA /* liked@3x.png in Resources */,
+				365C1AFC20B412CA00CF7DFA /* clear@3x.png in Resources */,
+				365C1AFE20B412CA00CF7DFA /* home@3x.png in Resources */,
 				365C1AA720B29FA400CF7DFA /* mycollected@3x.png in Resources */,
 				365C1AAC20B2A14600CF7DFA /* joke@3x.png in Resources */,
 				365C1ACE20B2B5AF00CF7DFA /* unliked@3x.png in Resources */,
+				365C1AFB20B412CA00CF7DFA /* clear@2x.png in Resources */,
+				365C1B0220B412CA00CF7DFA /* refresh@3x.png in Resources */,
 				365C1A9C20B29CCF00CF7DFA /* LeftMuneCell.xib in Resources */,
+				365C1AFA20B412CA00CF7DFA /* back@3x.png in Resources */,
 				365C1ABB20B2A39300CF7DFA /* MyCollectedViewController.xib in Resources */,
 				365C1AE620B3FE0400CF7DFA /* uncollected@3x.png in Resources */,
 				365C1AA820B29FA400CF7DFA /* night@3x.png in Resources */,
 				36ADA26820AD4CE5005E5F6E /* Podfile in Resources */,
+				365C1AF920B412CA00CF7DFA /* back@2x.png in Resources */,
 				365C1AE820B3FE2100CF7DFA /* collected@3x.png in Resources */,
 				365C1AAE20B2A29500CF7DFA /* cache@3x.png in Resources */,
 				365C1AE220B3FC4A00CF7DFA /* liked2@3x.png in Resources */,
@@ -484,6 +541,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SVGManager/Pods-SVGManager-resources.sh",
+				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/LBPhotoBrowser/test/LBPhotoBrowser/LBPhotoBrowser.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
@@ -538,6 +596,7 @@
 				365C1ABF20B2A3A100CF7DFA /* CelanCacheViewController.m in Sources */,
 				36ADA2A320AEA85A005E5F6E /* JokesModel.m in Sources */,
 				DBCFFFCA20B01E5E00CF52EA /* ImageJokesCell.m in Sources */,
+				365C1B0320B412CA00CF7DFA /* W20WebVC.m in Sources */,
 				36C4988820AEC219002AA358 /* UIImageView+LBBlurredImage.m in Sources */,
 				365C1A8D20B290B000CF7DFA /* LeftViewController.m in Sources */,
 			);
