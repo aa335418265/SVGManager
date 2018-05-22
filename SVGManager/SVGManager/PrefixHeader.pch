@@ -27,7 +27,8 @@
 #import "UIView+ThemeChange.h"
 #import "JokesManager.h"
 #import "BMShowHUD.h"
-
+#import "ThemeManage.h"
+#import "UIImageView+LBBlurredImage.h"
 #ifndef weakify
 #if DEBUG
 #if __has_feature(objc_arc)

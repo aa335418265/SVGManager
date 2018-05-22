@@ -34,11 +34,7 @@
     _tableView.dataSource = self;
     _tableView.delegate = self;
 
-//    UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-//    self.tableView.backgroundView=bgView;
-//        [bgView setImageToBlur:[UIImage imageNamed:@"example"] blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:^(NSError *error) {
-//            NSLog(@"玻璃效果图片已经好了");
-//        }];
+    [self themeChange];
     
     //下拉刷新
     //下拉刷新
@@ -48,7 +44,21 @@
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
     [self.view addSubview:_tableView];
     [self loadNewJokes];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:ThemeManageChangeNotification object:nil];
+    
 }
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)themeChange  {
+    
+    UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    self.tableView.backgroundView=bgView;
+    [bgView setImageToBlur:[ThemeManage shareThemeManage].tableViewbgImage blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:nil];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

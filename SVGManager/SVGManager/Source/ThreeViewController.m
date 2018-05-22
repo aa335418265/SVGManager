@@ -33,7 +33,7 @@
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     _tableView.dataSource = self;
     _tableView.delegate = self;
-
+    [self themeChange];
     //下拉刷新
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewJokes)];
 
@@ -41,6 +41,18 @@
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
     [self.view addSubview:_tableView];
     [self loadNewJokes];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:ThemeManageChangeNotification object:nil];
+    
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)themeChange  {
+    
+    UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    self.tableView.backgroundView=bgView;
+    [bgView setImageToBlur:[ThemeManage shareThemeManage].tableViewbgImage blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

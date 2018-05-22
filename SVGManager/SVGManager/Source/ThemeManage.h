@@ -11,10 +11,19 @@
 @interface ThemeManage : NSObject
 
 #pragma mark - 颜色属性
+
+//
+@property(nonatomic, retain) UIImage *tableViewbgImage;
+@property(nonatomic, retain) UIImage *likedImage;
+@property(nonatomic, retain) UIImage *collectedImage;
+
+@property(nonatomic, retain) UIColor *contentColor;
+@property(nonatomic, retain) UIColor *update;
+
+
 @property(nonatomic, retain) UIColor *bgColor;
 @property(nonatomic, retain) UIColor *color1;
 @property(nonatomic, retain) UIColor *color2;
-@property(nonatomic, retain) UIColor *textColor;
 @property(nonatomic, retain) UIColor *textColorGray;
 @property(nonatomic, retain) UIColor *navBarColor;
 @property(nonatomic, retain) UIColor *colorClear;
@@ -29,4 +38,10 @@
  */
 + (ThemeManage *)shareThemeManage;
 
+
+
+
 @end
+
+//通知
+extern NSString * ThemeManageChangeNotification ;

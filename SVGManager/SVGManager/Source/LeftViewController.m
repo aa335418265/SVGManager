@@ -19,6 +19,10 @@
 
 @implementation LeftViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -28,7 +32,7 @@
     UIImageView *headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
     headerView.image = [UIImage imageNamed:@"joke"];
     _tableView.tableHeaderView = headerView;
-
+    [self themeChange];
     _tableView.tableFooterView = [UIView new];
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     _tableView.dataSource = self;
@@ -39,8 +43,20 @@
                   @"我的收藏",
                   @"缓存清理",
                   @"关于我们"];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:ThemeManageChangeNotification object:nil];
+    
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)themeChange  {
+    
+    UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    self.tableView.backgroundView=bgView;
+    [bgView setImageToBlur:[ThemeManage shareThemeManage].tableViewbgImage blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:nil];
+    
+}
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -9,6 +9,7 @@
 #import "ITXPageViewController.h"
 #import "TwoViewController.h"
 #import "UIViewController+MMDrawerController.h"
+#import "ThemeManage.h"
 @interface ITXPageViewController ()
 @property (nonatomic, strong) NSArray *titleData;
 @end
@@ -29,11 +30,34 @@
      self.navigationItem.rightBarButtonItem.tintColor = [UIColor blackColor];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor blackColor];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:ThemeManageChangeNotification object:nil];
+    
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)themeChange  {
+    if ([ThemeManage shareThemeManage].isNight) {
+        self.titleColorNormal = [UIColor redColor];
+        self.titleColorSelected = [UIColor lightGrayColor];
+    }else{
+        self.titleColorNormal = [UIColor blackColor];
+        self.titleColorSelected = [UIColor redColor];
+    }
+    
+}
 - (void)rightBtn
 {
-    NSLog(@"搜索");
+
+    [ThemeManage shareThemeManage].isNight = ![ThemeManage shareThemeManage].isNight;
+    if ([ThemeManage shareThemeManage].isNight) {
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"example"] forBarMetrics:0];
+        self.navigationItem.rightBarButtonItem.image = [UIImage imageNamed:@"night"];
+    }else{
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:0];
+        self.navigationItem.rightBarButtonItem.image = [UIImage imageNamed:@"light"];
+    }
 }
 -(void)leftBtn{
     //这里的话是通过遍历循环拿到之前在AppDelegate中声明的那个MMDrawerController属性，然后判断是否为打开状态，如果是就关闭，否就是打开(初略解释，里面还有一些条件)
@@ -59,7 +83,6 @@
 - (UIViewController *)pageController:(WMPageController *)pageController viewControllerAtIndex:(NSInteger)index {
     switch (index) {
         case 0: {
-            
             return [[TwoViewController alloc] init];
         }
             

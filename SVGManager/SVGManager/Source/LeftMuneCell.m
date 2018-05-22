@@ -20,6 +20,7 @@
     if (self) {
         self = (LeftMuneCell *)[[[NSBundle mainBundle] loadNibNamed:@"LeftMuneCell" owner:self options:nil] firstObject];
     }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:ThemeManageChangeNotification object:nil];
     return self;
 }
 
@@ -27,6 +28,20 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)themeChange  {
+    if ([ThemeManage shareThemeManage].isNight) {
+        self.contentLabel.textColor = [UIColor lightGrayColor];
+    }else{
+        self.contentLabel.textColor = [UIColor darkGrayColor];
+    }
+    
 }
 
 @end

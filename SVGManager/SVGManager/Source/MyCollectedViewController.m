@@ -30,7 +30,9 @@
     
     self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
     _tableView.backgroundColor = [UIColor clearColor];
-    
+    UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    self.tableView.backgroundView=bgView;
+    [bgView setImageToBlur:[ThemeManage shareThemeManage].tableViewbgImage blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:nil];
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     _tableView.dataSource = self;
@@ -42,9 +44,20 @@
     
     
     [self.view addSubview:_tableView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:ThemeManageChangeNotification object:nil];
+    
 }
 
-
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)themeChange  {
+    
+    UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    self.tableView.backgroundView=bgView;
+    [bgView setImageToBlur:[ThemeManage shareThemeManage].tableViewbgImage blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:nil];
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

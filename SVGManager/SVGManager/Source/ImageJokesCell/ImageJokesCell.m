@@ -89,8 +89,18 @@
         }];
         self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:ThemeManageChangeNotification object:nil];
     return self;
 }
+
+- (void)themeChange  {
+    
+    _contentLabel.textColor = [ThemeManage shareThemeManage].contentColor;
+    [_likeBtn setBackgroundImage: [ThemeManage shareThemeManage].likedImage forState:UIControlStateSelected];
+    [_collectedBtn setBackgroundImage:[ThemeManage shareThemeManage].collectedImage forState:UIControlStateSelected];
+
+}
+    
 - (UIImageView *)bgImageView
 {
     if (_bgImageView == nil) {
@@ -126,7 +136,7 @@
 {
     if (_contentLabel == nil) {
         _contentLabel = [[UILabel alloc] init];
-        _contentLabel.textColor = [UIColor darkGrayColor];
+        _contentLabel.textColor = [ThemeManage shareThemeManage].contentColor;
         _contentLabel.numberOfLines = 0;
         _contentLabel.font = [UIFont systemFontOfSize:14];
     }

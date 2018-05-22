@@ -10,7 +10,10 @@
 #import <SDImageCache.h>
 
 @interface CelanCacheViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *cleanCacheTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cacheTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cacheSizeLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -21,7 +24,29 @@
     self.title = @"清理缓存";
     self.edgesForExtendedLayout = UIRectEdgeNone;
     [self getCacheSize];
+
+    [self themeChange];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:ThemeManageChangeNotification object:nil];
+    
 }
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)themeChange  {
+    [self.imageView setImageToBlur:[ThemeManage shareThemeManage].tableViewbgImage blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:nil];
+    if ([ThemeManage shareThemeManage].isNight) {
+        self.cleanCacheTitleLabel.textColor = [UIColor lightGrayColor];
+        self.cacheTitleLabel.textColor = [UIColor lightGrayColor];
+        self.cacheSizeLabel.textColor = [UIColor lightGrayColor];
+    }else{
+        self.cleanCacheTitleLabel.textColor = [UIColor darkGrayColor];
+        self.cacheTitleLabel.textColor = [UIColor darkGrayColor];
+        self.cacheSizeLabel.textColor = [UIColor darkGrayColor];
+    }
+}
+
 
 - (IBAction)cleanCache:(id)sender {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"您要清除现有缓存吗?" message:nil preferredStyle:UIAlertControllerStyleAlert];

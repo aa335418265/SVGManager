@@ -8,6 +8,9 @@
 
 #import "ThemeManage.h"
 
+
+NSString  * ThemeManageChangeNotification = @"themeManageChangeNotification";
+
 static ThemeManage *themeManage; // 单例
 
 @implementation ThemeManage
@@ -31,30 +34,25 @@ static ThemeManage *themeManage; // 单例
     _isNight = isNight;
     
     if (self.isNight) { // 夜间模式改变相关颜色
-        
-        self.bgColor = [UIColor colorWithRed:0.06 green:0.08 blue:0.1 alpha:1];
-        self.textColor = [UIColor whiteColor];
-        self.color1 = [UIColor colorWithRed:0.08 green:0.11 blue:0.13 alpha:1];
-        self.navBarColor = [UIColor whiteColor];
-        self.color2 = [UIColor colorWithRed:0.2 green:0.31 blue:0.43 alpha:1];
-        self.textColorGray = [UIColor whiteColor];
+        self.tableViewbgImage = [UIImage imageNamed:@"example"];
+        self.contentColor = [UIColor lightGrayColor];
+        self.likedImage =[UIImage imageNamed:@"liked2"];
+        self.collectedImage =[UIImage imageNamed:@"collected2"];
+
     } else{
         
-        self.bgColor = [UIColor whiteColor];
-        self.textColor = [UIColor blackColor];
-        self.color1 = [UIColor colorWithRed:0.06 green:0.25 blue:0.48 alpha:1];
-        self.navBarColor = [UIColor colorWithRed:0.31 green:0.73 blue:0.58 alpha:1];
-        self.color2 = [UIColor colorWithRed:0.57 green:0.66 blue:0.77 alpha:1];
-        self.textColorGray = [UIColor grayColor];
+        self.tableViewbgImage = [UIImage imageWithColor:[UIColor whiteColor]];
+        self.contentColor = [UIColor darkGrayColor];
+        self.likedImage =[UIImage imageNamed:@"liked"];
+        self.collectedImage =[UIImage imageNamed:@"collected"];
+        
+
     }
     
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        self.colorClear = [UIColor clearColor];
-    });
-}
+    [[NSNotificationCenter defaultCenter] postNotificationName:ThemeManageChangeNotification object:nil];
 
+
+}
 
 
 

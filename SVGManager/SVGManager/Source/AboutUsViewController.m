@@ -9,6 +9,7 @@
 #import "AboutUsViewController.h"
 #import "ImageJokesCell.h"
 @interface AboutUsViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -18,11 +19,18 @@
     [super viewDidLoad];
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.title = @"关于我们";
-    
 
-
+    [self themeChange];
     
-//
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:ThemeManageChangeNotification object:nil];
+    
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+- (void)themeChange  {
+    [self.imageView setImageToBlur:[ThemeManage shareThemeManage].tableViewbgImage blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:nil];
 }
 
 - (void)didReceiveMemoryWarning {
