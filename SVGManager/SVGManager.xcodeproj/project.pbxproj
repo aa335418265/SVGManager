@@ -20,7 +20,6 @@
 		365C1A9E20B29ED700CF7DFA /* about@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1A9D20B29ED700CF7DFA /* about@3x.png */; };
 		365C1AA720B29FA400CF7DFA /* mycollected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AA520B29FA300CF7DFA /* mycollected@3x.png */; };
 		365C1AA820B29FA400CF7DFA /* night@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AA620B29FA400CF7DFA /* night@3x.png */; };
-		365C1AAA20B2A00700CF7DFA /* light.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AA920B2A00600CF7DFA /* light.png */; };
 		365C1AAC20B2A14600CF7DFA /* joke@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AAB20B2A14500CF7DFA /* joke@3x.png */; };
 		365C1AAE20B2A29500CF7DFA /* cache@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AAD20B2A29400CF7DFA /* cache@3x.png */; };
 		365C1AB320B2A35000CF7DFA /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365C1AB120B2A35000CF7DFA /* AboutUsViewController.m */; };
@@ -37,6 +36,7 @@
 		365C1ACE20B2B5AF00CF7DFA /* unliked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1ACC20B2B5AF00CF7DFA /* unliked@3x.png */; };
 		365C1AD120B2B84400CF7DFA /* JokesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 365C1AD020B2B84400CF7DFA /* JokesManager.m */; };
 		365C1AD620B2CE1200CF7DFA /* BMShowHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 365C1AD520B2CE1200CF7DFA /* BMShowHUD.m */; };
+		365C1AE020B3EDAA00CF7DFA /* light@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1ADF20B3EDA900CF7DFA /* light@3x.png */; };
 		36ADA24620AD1F37005E5F6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA24520AD1F37005E5F6E /* AppDelegate.m */; };
 		36ADA24E20AD1F39005E5F6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ADA24D20AD1F39005E5F6E /* Assets.xcassets */; };
 		36ADA25120AD1F39005E5F6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36ADA24F20AD1F39005E5F6E /* LaunchScreen.storyboard */; };
@@ -49,31 +49,6 @@
 		36ADA28420AD7C6E005E5F6E /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA28320AD7C6E005E5F6E /* TwoViewController.m */; };
 		36ADA28720AD7C79005E5F6E /* ThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA28620AD7C79005E5F6E /* ThreeViewController.m */; };
 		36ADA2A320AEA85A005E5F6E /* JokesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2A220AEA85A005E5F6E /* JokesModel.m */; };
-		36ADA2C020AEAA22005E5F6E /* NSData+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2A720AEAA22005E5F6E /* NSData+LK.m */; };
-		36ADA2C120AEAA22005E5F6E /* NSFileManager+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2A920AEAA22005E5F6E /* NSFileManager+LK.m */; };
-		36ADA2C220AEAA22005E5F6E /* NSObject+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2AB20AEAA22005E5F6E /* NSObject+LK.m */; };
-		36ADA2C320AEAA22005E5F6E /* NSString+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2AD20AEAA22005E5F6E /* NSString+LK.m */; };
-		36ADA2C420AEAA22005E5F6E /* NSURL+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2AF20AEAA22005E5F6E /* NSURL+LK.m */; };
-		36ADA2C520AEAA22005E5F6E /* UIButton+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2B120AEAA22005E5F6E /* UIButton+LK.m */; };
-		36ADA2C620AEAA22005E5F6E /* UIColor+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2B320AEAA22005E5F6E /* UIColor+LK.m */; };
-		36ADA2C720AEAA22005E5F6E /* UIImage+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2B520AEAA22005E5F6E /* UIImage+LK.m */; };
-		36ADA2C820AEAA22005E5F6E /* UIImageView+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2B720AEAA22005E5F6E /* UIImageView+LK.m */; };
-		36ADA2C920AEAA22005E5F6E /* UIView+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2B920AEAA22005E5F6E /* UIView+LK.m */; };
-		36ADA2CA20AEAA22005E5F6E /* UIView+Toast_LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2BB20AEAA22005E5F6E /* UIView+Toast_LK.m */; };
-		36ADA2CB20AEAA22005E5F6E /* UIViewController+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2BD20AEAA22005E5F6E /* UIViewController+LK.m */; };
-		36ADA2CC20AEAA22005E5F6E /* UIWindow+LK.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2BF20AEAA22005E5F6E /* UIWindow+LK.m */; };
-		36ADA2D720AEAAA6005E5F6E /* LKThemeInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 36ADA2CE20AEAAA6005E5F6E /* LKThemeInfo.json */; };
-		36ADA2D820AEAAA6005E5F6E /* LKThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2D020AEAAA6005E5F6E /* LKThemeManager.m */; };
-		36ADA2D920AEAAA6005E5F6E /* NSObject+LKTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2D220AEAAA6005E5F6E /* NSObject+LKTheme.m */; };
-		36ADA2DA20AEAAA6005E5F6E /* UIImage+LKTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2D420AEAAA6005E5F6E /* UIImage+LKTheme.m */; };
-		36ADA2DB20AEAAA6005E5F6E /* UIView+LKTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2D620AEAAA6005E5F6E /* UIView+LKTheme.m */; };
-		36ADA2E720AEAAC0005E5F6E /* LKSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2DE20AEAAC0005E5F6E /* LKSafeCategory.m */; };
-		36ADA2E820AEAAC0005E5F6E /* LKWeakArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2E020AEAAC0005E5F6E /* LKWeakArray.m */; };
-		36ADA2E920AEAAC0005E5F6E /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2E220AEAAC0005E5F6E /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		36ADA2EA20AEAAC0005E5F6E /* UIDevice-Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2E420AEAAC0005E5F6E /* UIDevice-Hardware.m */; };
-		36ADA2EB20AEAAC0005E5F6E /* YYJSONHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2E620AEAAC0005E5F6E /* YYJSONHelper.m */; };
-		36ADA2F020AEAB8F005E5F6E /* NSString+DQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2EF20AEAB8F005E5F6E /* NSString+DQ.m */; };
-		36C4987A20AEACCE002AA358 /* LKBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C4987820AEACCE002AA358 /* LKBaseNavigationController.m */; };
 		36C4988820AEC219002AA358 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C4988720AEC219002AA358 /* UIImageView+LBBlurredImage.m */; };
 		36C4988B20AEC237002AA358 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C4988A20AEC237002AA358 /* example.png */; };
 		DBCFFFCA20B01E5E00CF52EA /* ImageJokesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCFFFC820B01E5E00CF52EA /* ImageJokesCell.m */; };
@@ -96,7 +71,6 @@
 		365C1A9D20B29ED700CF7DFA /* about@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about@3x.png"; sourceTree = "<group>"; };
 		365C1AA520B29FA300CF7DFA /* mycollected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mycollected@3x.png"; sourceTree = "<group>"; };
 		365C1AA620B29FA400CF7DFA /* night@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "night@3x.png"; sourceTree = "<group>"; };
-		365C1AA920B2A00600CF7DFA /* light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = light.png; sourceTree = "<group>"; };
 		365C1AAB20B2A14500CF7DFA /* joke@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joke@3x.png"; sourceTree = "<group>"; };
 		365C1AAD20B2A29400CF7DFA /* cache@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cache@3x.png"; sourceTree = "<group>"; };
 		365C1AB020B2A35000CF7DFA /* AboutUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
@@ -119,6 +93,7 @@
 		365C1AD020B2B84400CF7DFA /* JokesManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JokesManager.m; sourceTree = "<group>"; };
 		365C1AD420B2CE1200CF7DFA /* BMShowHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMShowHUD.h; sourceTree = "<group>"; };
 		365C1AD520B2CE1200CF7DFA /* BMShowHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMShowHUD.m; sourceTree = "<group>"; };
+		365C1ADF20B3EDA900CF7DFA /* light@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "light@3x.png"; sourceTree = "<group>"; };
 		36ADA24120AD1F37005E5F6E /* SVGManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVGManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ADA24420AD1F37005E5F6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36ADA24520AD1F37005E5F6E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -142,57 +117,7 @@
 		36ADA28620AD7C79005E5F6E /* ThreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeViewController.m; sourceTree = "<group>"; };
 		36ADA2A120AEA85A005E5F6E /* JokesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokesModel.h; sourceTree = "<group>"; };
 		36ADA2A220AEA85A005E5F6E /* JokesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokesModel.m; sourceTree = "<group>"; };
-		36ADA2A520AEAA22005E5F6E /* LKTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKTools.h; sourceTree = "<group>"; };
-		36ADA2A620AEAA22005E5F6E /* NSData+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+LK.h"; sourceTree = "<group>"; };
-		36ADA2A720AEAA22005E5F6E /* NSData+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+LK.m"; sourceTree = "<group>"; };
-		36ADA2A820AEAA22005E5F6E /* NSFileManager+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+LK.h"; sourceTree = "<group>"; };
-		36ADA2A920AEAA22005E5F6E /* NSFileManager+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+LK.m"; sourceTree = "<group>"; };
-		36ADA2AA20AEAA22005E5F6E /* NSObject+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LK.h"; sourceTree = "<group>"; };
-		36ADA2AB20AEAA22005E5F6E /* NSObject+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LK.m"; sourceTree = "<group>"; };
-		36ADA2AC20AEAA22005E5F6E /* NSString+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LK.h"; sourceTree = "<group>"; };
-		36ADA2AD20AEAA22005E5F6E /* NSString+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LK.m"; sourceTree = "<group>"; };
-		36ADA2AE20AEAA22005E5F6E /* NSURL+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+LK.h"; sourceTree = "<group>"; };
-		36ADA2AF20AEAA22005E5F6E /* NSURL+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+LK.m"; sourceTree = "<group>"; };
-		36ADA2B020AEAA22005E5F6E /* UIButton+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LK.h"; sourceTree = "<group>"; };
-		36ADA2B120AEAA22005E5F6E /* UIButton+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LK.m"; sourceTree = "<group>"; };
-		36ADA2B220AEAA22005E5F6E /* UIColor+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LK.h"; sourceTree = "<group>"; };
-		36ADA2B320AEAA22005E5F6E /* UIColor+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LK.m"; sourceTree = "<group>"; };
-		36ADA2B420AEAA22005E5F6E /* UIImage+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LK.h"; sourceTree = "<group>"; };
-		36ADA2B520AEAA22005E5F6E /* UIImage+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LK.m"; sourceTree = "<group>"; };
-		36ADA2B620AEAA22005E5F6E /* UIImageView+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LK.h"; sourceTree = "<group>"; };
-		36ADA2B720AEAA22005E5F6E /* UIImageView+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LK.m"; sourceTree = "<group>"; };
-		36ADA2B820AEAA22005E5F6E /* UIView+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LK.h"; sourceTree = "<group>"; };
-		36ADA2B920AEAA22005E5F6E /* UIView+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LK.m"; sourceTree = "<group>"; };
-		36ADA2BA20AEAA22005E5F6E /* UIView+Toast_LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast_LK.h"; sourceTree = "<group>"; };
-		36ADA2BB20AEAA22005E5F6E /* UIView+Toast_LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast_LK.m"; sourceTree = "<group>"; };
-		36ADA2BC20AEAA22005E5F6E /* UIViewController+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LK.h"; sourceTree = "<group>"; };
-		36ADA2BD20AEAA22005E5F6E /* UIViewController+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LK.m"; sourceTree = "<group>"; };
-		36ADA2BE20AEAA22005E5F6E /* UIWindow+LK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+LK.h"; sourceTree = "<group>"; };
-		36ADA2BF20AEAA22005E5F6E /* UIWindow+LK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+LK.m"; sourceTree = "<group>"; };
-		36ADA2CE20AEAAA6005E5F6E /* LKThemeInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LKThemeInfo.json; sourceTree = "<group>"; };
-		36ADA2CF20AEAAA6005E5F6E /* LKThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKThemeManager.h; sourceTree = "<group>"; };
-		36ADA2D020AEAAA6005E5F6E /* LKThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKThemeManager.m; sourceTree = "<group>"; };
-		36ADA2D120AEAAA6005E5F6E /* NSObject+LKTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LKTheme.h"; sourceTree = "<group>"; };
-		36ADA2D220AEAAA6005E5F6E /* NSObject+LKTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LKTheme.m"; sourceTree = "<group>"; };
-		36ADA2D320AEAAA6005E5F6E /* UIImage+LKTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LKTheme.h"; sourceTree = "<group>"; };
-		36ADA2D420AEAAA6005E5F6E /* UIImage+LKTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LKTheme.m"; sourceTree = "<group>"; };
-		36ADA2D520AEAAA6005E5F6E /* UIView+LKTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LKTheme.h"; sourceTree = "<group>"; };
-		36ADA2D620AEAAA6005E5F6E /* UIView+LKTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LKTheme.m"; sourceTree = "<group>"; };
-		36ADA2DD20AEAAC0005E5F6E /* LKSafeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKSafeCategory.h; sourceTree = "<group>"; };
-		36ADA2DE20AEAAC0005E5F6E /* LKSafeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKSafeCategory.m; sourceTree = "<group>"; };
-		36ADA2DF20AEAAC0005E5F6E /* LKWeakArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKWeakArray.h; sourceTree = "<group>"; };
-		36ADA2E020AEAAC0005E5F6E /* LKWeakArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKWeakArray.m; sourceTree = "<group>"; };
-		36ADA2E120AEAAC0005E5F6E /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
-		36ADA2E220AEAAC0005E5F6E /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
-		36ADA2E320AEAAC0005E5F6E /* UIDevice-Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice-Hardware.h"; sourceTree = "<group>"; };
-		36ADA2E420AEAAC0005E5F6E /* UIDevice-Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice-Hardware.m"; sourceTree = "<group>"; };
-		36ADA2E520AEAAC0005E5F6E /* YYJSONHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYJSONHelper.h; sourceTree = "<group>"; };
-		36ADA2E620AEAAC0005E5F6E /* YYJSONHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYJSONHelper.m; sourceTree = "<group>"; };
 		36ADA2EC20AEAB60005E5F6E /* DQColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQColorMacros.h; sourceTree = "<group>"; };
-		36ADA2EE20AEAB8F005E5F6E /* NSString+DQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DQ.h"; sourceTree = "<group>"; };
-		36ADA2EF20AEAB8F005E5F6E /* NSString+DQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DQ.m"; sourceTree = "<group>"; };
-		36C4987820AEACCE002AA358 /* LKBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKBaseNavigationController.m; sourceTree = "<group>"; };
-		36C4987920AEACCE002AA358 /* LKBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKBaseNavigationController.h; sourceTree = "<group>"; };
 		36C4988620AEC219002AA358 /* UIImageView+LBBlurredImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LBBlurredImage.h"; sourceTree = "<group>"; };
 		36C4988720AEC219002AA358 /* UIImageView+LBBlurredImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LBBlurredImage.m"; sourceTree = "<group>"; };
 		36C4988A20AEC237002AA358 /* example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example.png; sourceTree = "<group>"; };
@@ -363,12 +288,7 @@
 				365C1A8220B2789A00CF7DFA /* themeManage */,
 				36ADA29D20AEA830005E5F6E /* ImageJokesCell */,
 				36C4988520AEC20C002AA358 /* BlurredImage */,
-				36C4987720AEACBC002AA358 /* BaseNavigationController */,
-				36ADA2ED20AEAB8F005E5F6E /* NSObject */,
 				36ADA2EC20AEAB60005E5F6E /* DQColorMacros.h */,
-				36ADA2DC20AEAAC0005E5F6E /* Utils */,
-				36ADA2CD20AEAAA6005E5F6E /* Theme */,
-				36ADA2A420AEAA22005E5F6E /* LK */,
 				36ADA27C20AD7C41005E5F6E /* ITXPageViewController.h */,
 				36ADA27D20AD7C41005E5F6E /* ITXPageViewController.m */,
 				36ADA27F20AD7C62005E5F6E /* OneViewController.h */,
@@ -392,91 +312,6 @@
 			path = ImageJokesCell;
 			sourceTree = "<group>";
 		};
-		36ADA2A420AEAA22005E5F6E /* LK */ = {
-			isa = PBXGroup;
-			children = (
-				36ADA2A520AEAA22005E5F6E /* LKTools.h */,
-				36ADA2A620AEAA22005E5F6E /* NSData+LK.h */,
-				36ADA2A720AEAA22005E5F6E /* NSData+LK.m */,
-				36ADA2A820AEAA22005E5F6E /* NSFileManager+LK.h */,
-				36ADA2A920AEAA22005E5F6E /* NSFileManager+LK.m */,
-				36ADA2AA20AEAA22005E5F6E /* NSObject+LK.h */,
-				36ADA2AB20AEAA22005E5F6E /* NSObject+LK.m */,
-				36ADA2AC20AEAA22005E5F6E /* NSString+LK.h */,
-				36ADA2AD20AEAA22005E5F6E /* NSString+LK.m */,
-				36ADA2AE20AEAA22005E5F6E /* NSURL+LK.h */,
-				36ADA2AF20AEAA22005E5F6E /* NSURL+LK.m */,
-				36ADA2B020AEAA22005E5F6E /* UIButton+LK.h */,
-				36ADA2B120AEAA22005E5F6E /* UIButton+LK.m */,
-				36ADA2B220AEAA22005E5F6E /* UIColor+LK.h */,
-				36ADA2B320AEAA22005E5F6E /* UIColor+LK.m */,
-				36ADA2B420AEAA22005E5F6E /* UIImage+LK.h */,
-				36ADA2B520AEAA22005E5F6E /* UIImage+LK.m */,
-				36ADA2B620AEAA22005E5F6E /* UIImageView+LK.h */,
-				36ADA2B720AEAA22005E5F6E /* UIImageView+LK.m */,
-				36ADA2B820AEAA22005E5F6E /* UIView+LK.h */,
-				36ADA2B920AEAA22005E5F6E /* UIView+LK.m */,
-				36ADA2BA20AEAA22005E5F6E /* UIView+Toast_LK.h */,
-				36ADA2BB20AEAA22005E5F6E /* UIView+Toast_LK.m */,
-				36ADA2BC20AEAA22005E5F6E /* UIViewController+LK.h */,
-				36ADA2BD20AEAA22005E5F6E /* UIViewController+LK.m */,
-				36ADA2BE20AEAA22005E5F6E /* UIWindow+LK.h */,
-				36ADA2BF20AEAA22005E5F6E /* UIWindow+LK.m */,
-			);
-			path = LK;
-			sourceTree = "<group>";
-		};
-		36ADA2CD20AEAAA6005E5F6E /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				36ADA2CE20AEAAA6005E5F6E /* LKThemeInfo.json */,
-				36ADA2CF20AEAAA6005E5F6E /* LKThemeManager.h */,
-				36ADA2D020AEAAA6005E5F6E /* LKThemeManager.m */,
-				36ADA2D120AEAAA6005E5F6E /* NSObject+LKTheme.h */,
-				36ADA2D220AEAAA6005E5F6E /* NSObject+LKTheme.m */,
-				36ADA2D320AEAAA6005E5F6E /* UIImage+LKTheme.h */,
-				36ADA2D420AEAAA6005E5F6E /* UIImage+LKTheme.m */,
-				36ADA2D520AEAAA6005E5F6E /* UIView+LKTheme.h */,
-				36ADA2D620AEAAA6005E5F6E /* UIView+LKTheme.m */,
-			);
-			path = Theme;
-			sourceTree = "<group>";
-		};
-		36ADA2DC20AEAAC0005E5F6E /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				36ADA2DD20AEAAC0005E5F6E /* LKSafeCategory.h */,
-				36ADA2DE20AEAAC0005E5F6E /* LKSafeCategory.m */,
-				36ADA2DF20AEAAC0005E5F6E /* LKWeakArray.h */,
-				36ADA2E020AEAAC0005E5F6E /* LKWeakArray.m */,
-				36ADA2E120AEAAC0005E5F6E /* OpenUDID.h */,
-				36ADA2E220AEAAC0005E5F6E /* OpenUDID.m */,
-				36ADA2E320AEAAC0005E5F6E /* UIDevice-Hardware.h */,
-				36ADA2E420AEAAC0005E5F6E /* UIDevice-Hardware.m */,
-				36ADA2E520AEAAC0005E5F6E /* YYJSONHelper.h */,
-				36ADA2E620AEAAC0005E5F6E /* YYJSONHelper.m */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		36ADA2ED20AEAB8F005E5F6E /* NSObject */ = {
-			isa = PBXGroup;
-			children = (
-				36ADA2EE20AEAB8F005E5F6E /* NSString+DQ.h */,
-				36ADA2EF20AEAB8F005E5F6E /* NSString+DQ.m */,
-			);
-			path = NSObject;
-			sourceTree = "<group>";
-		};
-		36C4987720AEACBC002AA358 /* BaseNavigationController */ = {
-			isa = PBXGroup;
-			children = (
-				36C4987920AEACCE002AA358 /* LKBaseNavigationController.h */,
-				36C4987820AEACCE002AA358 /* LKBaseNavigationController.m */,
-			);
-			name = BaseNavigationController;
-			sourceTree = "<group>";
-		};
 		36C4988520AEC20C002AA358 /* BlurredImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +324,7 @@
 		36C4988920AEC22F002AA358 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				365C1ADF20B3EDA900CF7DFA /* light@3x.png */,
 				365C1ACB20B2B5AF00CF7DFA /* liked@3x.png */,
 				365C1ACC20B2B5AF00CF7DFA /* unliked@3x.png */,
 				365C1AC820B2B4A700CF7DFA /* collected@3x.png */,
@@ -496,7 +332,6 @@
 				365C1AC120B2A5D300CF7DFA /* jiantou@3x.png */,
 				365C1AAD20B2A29400CF7DFA /* cache@3x.png */,
 				365C1AAB20B2A14500CF7DFA /* joke@3x.png */,
-				365C1AA920B2A00600CF7DFA /* light.png */,
 				365C1AA520B29FA300CF7DFA /* mycollected@3x.png */,
 				365C1AA620B29FA400CF7DFA /* night@3x.png */,
 				365C1A9D20B29ED700CF7DFA /* about@3x.png */,
@@ -587,9 +422,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				365C1AAA20B2A00700CF7DFA /* light.png in Resources */,
 				365C1ACA20B2B4A800CF7DFA /* collected@3x.png in Resources */,
 				365C1A9720B2939500CF7DFA /* search@3x.png in Resources */,
+				365C1AE020B3EDAA00CF7DFA /* light@3x.png in Resources */,
 				36ADA25120AD1F39005E5F6E /* LaunchScreen.storyboard in Resources */,
 				365C1AB420B2A35000CF7DFA /* AboutUsViewController.xib in Resources */,
 				365C1A9520B292B400CF7DFA /* menu2@3x.png in Resources */,
@@ -607,7 +442,6 @@
 				365C1A9C20B29CCF00CF7DFA /* LeftMuneCell.xib in Resources */,
 				365C1ABB20B2A39300CF7DFA /* MyCollectedViewController.xib in Resources */,
 				365C1AA820B29FA400CF7DFA /* night@3x.png in Resources */,
-				36ADA2D720AEAAA6005E5F6E /* LKThemeInfo.json in Resources */,
 				36ADA26820AD4CE5005E5F6E /* Podfile in Resources */,
 				365C1AAE20B2A29500CF7DFA /* cache@3x.png in Resources */,
 				365C1A9E20B29ED700CF7DFA /* about@3x.png in Resources */,
@@ -679,48 +513,24 @@
 			files = (
 				365C1AB320B2A35000CF7DFA /* AboutUsViewController.m in Sources */,
 				36ADA26620AD38F3005E5F6E /* HomeNavigationTitileViewButton.m in Sources */,
-				36ADA2C120AEAA22005E5F6E /* NSFileManager+LK.m in Sources */,
-				36ADA2E820AEAAC0005E5F6E /* LKWeakArray.m in Sources */,
-				36ADA2DA20AEAAA6005E5F6E /* UIImage+LKTheme.m in Sources */,
 				365C1A8520B278B200CF7DFA /* ThemeManage.m in Sources */,
 				365C1ABA20B2A39300CF7DFA /* MyCollectedViewController.m in Sources */,
-				36ADA2C720AEAA22005E5F6E /* UIImage+LK.m in Sources */,
-				36ADA2C320AEAA22005E5F6E /* NSString+LK.m in Sources */,
-				36ADA2D820AEAAA6005E5F6E /* LKThemeManager.m in Sources */,
 				36ADA27E20AD7C41005E5F6E /* ITXPageViewController.m in Sources */,
-				36ADA2CC20AEAA22005E5F6E /* UIWindow+LK.m in Sources */,
-				36ADA2C820AEAA22005E5F6E /* UIImageView+LK.m in Sources */,
 				365C1AC620B2A6CA00CF7DFA /* BMXIBSeparatorView.m in Sources */,
-				36ADA2C020AEAA22005E5F6E /* NSData+LK.m in Sources */,
-				36ADA2EB20AEAAC0005E5F6E /* YYJSONHelper.m in Sources */,
 				36ADA26520AD38F3005E5F6E /* HomeNavigatiaonTitleView.m in Sources */,
 				36ADA25420AD1F39005E5F6E /* main.m in Sources */,
-				36ADA2C420AEAA22005E5F6E /* NSURL+LK.m in Sources */,
-				36ADA2C920AEAA22005E5F6E /* UIView+LK.m in Sources */,
-				36ADA2EA20AEAAC0005E5F6E /* UIDevice-Hardware.m in Sources */,
 				36ADA24620AD1F37005E5F6E /* AppDelegate.m in Sources */,
-				36ADA2F020AEAB8F005E5F6E /* NSString+DQ.m in Sources */,
-				36ADA2C520AEAA22005E5F6E /* UIButton+LK.m in Sources */,
 				365C1AD120B2B84400CF7DFA /* JokesManager.m in Sources */,
-				36ADA2CA20AEAA22005E5F6E /* UIView+Toast_LK.m in Sources */,
-				36ADA2C620AEAA22005E5F6E /* UIColor+LK.m in Sources */,
 				36ADA28420AD7C6E005E5F6E /* TwoViewController.m in Sources */,
-				36ADA2D920AEAAA6005E5F6E /* NSObject+LKTheme.m in Sources */,
 				365C1A8920B27BB600CF7DFA /* UIView+ThemeChange.m in Sources */,
 				365C1A9B20B29CCF00CF7DFA /* LeftMuneCell.m in Sources */,
 				365C1AD620B2CE1200CF7DFA /* BMShowHUD.m in Sources */,
-				36ADA2DB20AEAAA6005E5F6E /* UIView+LKTheme.m in Sources */,
 				36ADA28120AD7C62005E5F6E /* OneViewController.m in Sources */,
 				36ADA28720AD7C79005E5F6E /* ThreeViewController.m in Sources */,
 				365C1ABF20B2A3A100CF7DFA /* CelanCacheViewController.m in Sources */,
-				36ADA2C220AEAA22005E5F6E /* NSObject+LK.m in Sources */,
 				36ADA2A320AEA85A005E5F6E /* JokesModel.m in Sources */,
-				36ADA2E920AEAAC0005E5F6E /* OpenUDID.m in Sources */,
-				36C4987A20AEACCE002AA358 /* LKBaseNavigationController.m in Sources */,
 				DBCFFFCA20B01E5E00CF52EA /* ImageJokesCell.m in Sources */,
 				36C4988820AEC219002AA358 /* UIImageView+LBBlurredImage.m in Sources */,
-				36ADA2CB20AEAA22005E5F6E /* UIViewController+LK.m in Sources */,
-				36ADA2E720AEAAC0005E5F6E /* LKSafeCategory.m in Sources */,
 				365C1A8D20B290B000CF7DFA /* LeftViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

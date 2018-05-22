@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.title = @"主页";
     self.showOnNavigationBar=YES;
     self.menuView.style = WMMenuViewStyleDefault;
     self.menuView.layoutMode = WMMenuViewLayoutModeCenter;
@@ -25,7 +25,7 @@
     
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu2"] style:UIBarButtonItemStylePlain target:self action:@selector(leftBtn)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(rightBtn)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"light"] style:UIBarButtonItemStylePlain target:self action:@selector(rightBtn)];
      self.navigationItem.rightBarButtonItem.tintColor = [UIColor blackColor];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor blackColor];
 

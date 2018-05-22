@@ -13,7 +13,7 @@
 + (instancetype)sharedInstance;
 
 
-
+@property (nonatomic, strong) NSArray *collectedModels; ///< 收藏列表
 
 - (void)likeModel:(JokesModel *)model liked:(BOOL)liked;
 - (void)colletedModel:(JokesModel *)model collected:(BOOL)collected;

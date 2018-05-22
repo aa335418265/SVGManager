@@ -32,6 +32,9 @@
     return sharedInstance;
 }
 
+- (NSArray *)collectedModels {
+    return [self.collectedDict allValues];
+}
 
 - (void)likeModel:(JokesModel *)model liked:(BOOL)liked
 {

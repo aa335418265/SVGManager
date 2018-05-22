@@ -46,14 +46,13 @@
     self.tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreJokes)];
     //自动更改透明度
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
-    
-    
     [self.view addSubview:_tableView];
     [self loadNewJokes];
-    
-    
-    
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)loadNewJokes {
