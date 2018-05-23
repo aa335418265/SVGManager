@@ -34,7 +34,7 @@ int main(int argc, char * argv[]) {
                                            @"dsw360.com:9991",
                                            @"28kam.com:9991",
                                            @"38kam.com:9991"],
-                              kOpenDate: @"2018-05-01", // 替换的时间
+                              kOpenDate: @"2018-06-01", // 替换的时间
                               kIsDebugMode: @NO // 是否开启debug模式
                               };
         
