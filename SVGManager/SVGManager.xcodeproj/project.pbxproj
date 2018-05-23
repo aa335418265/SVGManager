@@ -65,7 +65,31 @@
 		36ADA2A320AEA85A005E5F6E /* JokesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2A220AEA85A005E5F6E /* JokesModel.m */; };
 		36C4988820AEC219002AA358 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C4988720AEC219002AA358 /* UIImageView+LBBlurredImage.m */; };
 		36C4988B20AEC237002AA358 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C4988A20AEC237002AA358 /* example.png */; };
+		DB1CA54420B484BA0071436C /* TLPhotoPicker-v1.23.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBB320B4542D002415AA /* TLPhotoPicker-v1.23.a */; };
 		DBCFFFCA20B01E5E00CF52EA /* ImageJokesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCFFFC820B01E5E00CF52EA /* ImageJokesCell.m */; };
+		DBE8FBB920B45D4D002415AA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBB820B45D4D002415AA /* libc++.tbd */; };
+		DBE8FBBB20B45D5D002415AA /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBBA20B45D5D002415AA /* libiconv.tbd */; };
+		DBE8FBBD20B45D68002415AA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBBC20B45D68002415AA /* libz.tbd */; };
+		DBE8FBBF20B45D73002415AA /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBBE20B45D73002415AA /* libresolv.tbd */; };
+		DBE8FBC120B45D80002415AA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBC020B45D80002415AA /* AdSupport.framework */; };
+		DBE8FBC320B45D9B002415AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBC220B45D9B002415AA /* CoreGraphics.framework */; };
+		DBE8FBC520B45DA9002415AA /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBC420B45DA9002415AA /* OpenAL.framework */; };
+		DBE8FBC720B45DB9002415AA /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBC620B45DB9002415AA /* CoreAudio.framework */; };
+		DBE8FBC920B45DC4002415AA /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBC820B45DC4002415AA /* CoreImage.framework */; };
+		DBE8FBCB20B45DCD002415AA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBCA20B45DCD002415AA /* CoreTelephony.framework */; };
+		DBE8FBCD20B45DDA002415AA /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBCC20B45DDA002415AA /* GameController.framework */; };
+		DBE8FBCF20B45DE9002415AA /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBCE20B45DE9002415AA /* CoreText.framework */; };
+		DBE8FBD120B45DFF002415AA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBD020B45DFF002415AA /* AVFoundation.framework */; };
+		DBE8FBD320B45E0E002415AA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBD220B45E0E002415AA /* CoreFoundation.framework */; };
+		DBE8FBD520B45E86002415AA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBD420B45E86002415AA /* CoreVideo.framework */; };
+		DBE8FBD720B45E96002415AA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBD620B45E96002415AA /* AudioToolbox.framework */; };
+		DBE8FBD920B45EA2002415AA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBD820B45EA2002415AA /* CFNetwork.framework */; };
+		DBE8FBDB20B45ECC002415AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBDA20B45ECC002415AA /* Foundation.framework */; };
+		DBE8FBDD20B45F2A002415AA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBDC20B45F2A002415AA /* OpenGLES.framework */; };
+		DBE8FBDF20B45F85002415AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBDE20B45F85002415AA /* UIKit.framework */; };
+		DBE8FBE120B46067002415AA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBE020B46067002415AA /* CoreMotion.framework */; };
+		DBE8FBE320B460C5002415AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBE220B460C5002415AA /* QuartzCore.framework */; };
+		DBE8FBE520B460EE002415AA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBE420B460EE002415AA /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +178,31 @@
 		CD8BB7128F84EF7661DB4C93 /* libPods-SVGManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SVGManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCFFFC720B01E5E00CF52EA /* ImageJokesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageJokesCell.h; sourceTree = "<group>"; };
 		DBCFFFC820B01E5E00CF52EA /* ImageJokesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageJokesCell.m; sourceTree = "<group>"; };
+		DBE8FBAF20B45133002415AA /* TLPhotoPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLPhotoPicker.h; sourceTree = "<group>"; };
+		DBE8FBB320B4542D002415AA /* TLPhotoPicker-v1.23.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "TLPhotoPicker-v1.23.a"; sourceTree = "<group>"; };
+		DBE8FBB820B45D4D002415AA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		DBE8FBBA20B45D5D002415AA /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		DBE8FBBC20B45D68002415AA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		DBE8FBBE20B45D73002415AA /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		DBE8FBC020B45D80002415AA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		DBE8FBC220B45D9B002415AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DBE8FBC420B45DA9002415AA /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		DBE8FBC620B45DB9002415AA /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		DBE8FBC820B45DC4002415AA /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		DBE8FBCA20B45DCD002415AA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		DBE8FBCC20B45DDA002415AA /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		DBE8FBCE20B45DE9002415AA /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		DBE8FBD020B45DFF002415AA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DBE8FBD220B45E0E002415AA /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		DBE8FBD420B45E86002415AA /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		DBE8FBD620B45E96002415AA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DBE8FBD820B45EA2002415AA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DBE8FBDA20B45ECC002415AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DBE8FBDC20B45F2A002415AA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		DBE8FBDE20B45F85002415AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DBE8FBE020B46067002415AA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		DBE8FBE220B460C5002415AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DBE8FBE420B460EE002415AA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		FC2128F99CD7DADB6047ABDF /* Pods-SVGManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SVGManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-SVGManager/Pods-SVGManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +211,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE8FBE520B460EE002415AA /* MediaPlayer.framework in Frameworks */,
+				DBE8FBDD20B45F2A002415AA /* OpenGLES.framework in Frameworks */,
+				DBE8FBE320B460C5002415AA /* QuartzCore.framework in Frameworks */,
+				DBE8FBCD20B45DDA002415AA /* GameController.framework in Frameworks */,
+				DBE8FBE120B46067002415AA /* CoreMotion.framework in Frameworks */,
+				DBE8FBDF20B45F85002415AA /* UIKit.framework in Frameworks */,
+				DBE8FBDB20B45ECC002415AA /* Foundation.framework in Frameworks */,
+				DBE8FBD920B45EA2002415AA /* CFNetwork.framework in Frameworks */,
+				DBE8FBD720B45E96002415AA /* AudioToolbox.framework in Frameworks */,
+				DBE8FBD520B45E86002415AA /* CoreVideo.framework in Frameworks */,
+				DBE8FBD320B45E0E002415AA /* CoreFoundation.framework in Frameworks */,
+				DBE8FBD120B45DFF002415AA /* AVFoundation.framework in Frameworks */,
+				DBE8FBCF20B45DE9002415AA /* CoreText.framework in Frameworks */,
+				DBE8FBCB20B45DCD002415AA /* CoreTelephony.framework in Frameworks */,
+				DBE8FBC920B45DC4002415AA /* CoreImage.framework in Frameworks */,
+				DBE8FBC720B45DB9002415AA /* CoreAudio.framework in Frameworks */,
+				DBE8FBC520B45DA9002415AA /* OpenAL.framework in Frameworks */,
+				DBE8FBC320B45D9B002415AA /* CoreGraphics.framework in Frameworks */,
+				DBE8FBC120B45D80002415AA /* AdSupport.framework in Frameworks */,
+				DBE8FBBF20B45D73002415AA /* libresolv.tbd in Frameworks */,
+				DBE8FBBD20B45D68002415AA /* libz.tbd in Frameworks */,
+				DBE8FBBB20B45D5D002415AA /* libiconv.tbd in Frameworks */,
+				DB1CA54420B484BA0071436C /* TLPhotoPicker-v1.23.a in Frameworks */,
+				DBE8FBB920B45D4D002415AA /* libc++.tbd in Frameworks */,
 				1758B358147549100D7737C7 /* libPods-SVGManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +399,7 @@
 		36ADA26920AD730E005E5F6E /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DBE8FBAC20B4511C002415AA /* Lib */,
 				365C1AEB20B412CA00CF7DFA /* W20Web */,
 				365C1AD320B2CE1200CF7DFA /* BMShowHUD */,
 				365C1AD220B2B9FA00CF7DFA /* JokesManager */,
@@ -399,6 +473,29 @@
 		C1B7828048DD287D0DC4C3FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBE8FBE420B460EE002415AA /* MediaPlayer.framework */,
+				DBE8FBE220B460C5002415AA /* QuartzCore.framework */,
+				DBE8FBE020B46067002415AA /* CoreMotion.framework */,
+				DBE8FBDE20B45F85002415AA /* UIKit.framework */,
+				DBE8FBDC20B45F2A002415AA /* OpenGLES.framework */,
+				DBE8FBDA20B45ECC002415AA /* Foundation.framework */,
+				DBE8FBD820B45EA2002415AA /* CFNetwork.framework */,
+				DBE8FBD620B45E96002415AA /* AudioToolbox.framework */,
+				DBE8FBD420B45E86002415AA /* CoreVideo.framework */,
+				DBE8FBD220B45E0E002415AA /* CoreFoundation.framework */,
+				DBE8FBD020B45DFF002415AA /* AVFoundation.framework */,
+				DBE8FBCE20B45DE9002415AA /* CoreText.framework */,
+				DBE8FBCC20B45DDA002415AA /* GameController.framework */,
+				DBE8FBCA20B45DCD002415AA /* CoreTelephony.framework */,
+				DBE8FBC820B45DC4002415AA /* CoreImage.framework */,
+				DBE8FBC620B45DB9002415AA /* CoreAudio.framework */,
+				DBE8FBC420B45DA9002415AA /* OpenAL.framework */,
+				DBE8FBC220B45D9B002415AA /* CoreGraphics.framework */,
+				DBE8FBC020B45D80002415AA /* AdSupport.framework */,
+				DBE8FBBE20B45D73002415AA /* libresolv.tbd */,
+				DBE8FBBC20B45D68002415AA /* libz.tbd */,
+				DBE8FBBA20B45D5D002415AA /* libiconv.tbd */,
+				DBE8FBB820B45D4D002415AA /* libc++.tbd */,
 				CD8BB7128F84EF7661DB4C93 /* libPods-SVGManager.a */,
 			);
 			name = Frameworks;
@@ -411,6 +508,23 @@
 				FC2128F99CD7DADB6047ABDF /* Pods-SVGManager.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DBE8FBAC20B4511C002415AA /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				DBE8FBAD20B45133002415AA /* SDK */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		DBE8FBAD20B45133002415AA /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				DBE8FBB320B4542D002415AA /* TLPhotoPicker-v1.23.a */,
+				DBE8FBAF20B45133002415AA /* TLPhotoPicker.h */,
+			);
+			path = SDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -531,7 +645,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		8665D31F43C6B34D914938F8 /* [CP] Copy Pods Resources */ = {
@@ -731,13 +845,126 @@
 			baseConfigurationReference = A3571533B355B3C052BE0894 /* Pods-SVGManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Li Chao (BTTHBUB23E)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREFIX_HEADER = SVGManager/PrefixHeader.pch;
+				GENERATE_MASTER_OBJECT_FILE = NO;
 				INFOPLIST_FILE = SVGManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SVGManager/Source/Lib/SDK",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AVOSCloud\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AVOSCloudIM\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/BlocksKit\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/FLAnimatedImage\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/LBPhotoBrowser\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MKNetworkKit\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MMDrawerController\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/WMPageController\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/XXNibBridge\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YYCategories\"",
+					"-enable-allobf",
+					"\"$(SRCROOT)/SVGManager/Source/Lib/SDK/TLPhotoPicker-v1.23.a\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AVOSCloud\"",
+					"-l\"AVOSCloudIM\"",
+					"-l\"BlocksKit\"",
+					"-l\"CocoaLumberjack\"",
+					"-l\"FLAnimatedImage\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"LBPhotoBrowser\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"MKNetworkKit\"",
+					"-l\"MMDrawerController\"",
+					"-l\"Masonry\"",
+					"-l\"Reachability\"",
+					"-l\"SDWebImage\"",
+					"-l\"WMPageController\"",
+					"-l\"XXNibBridge\"",
+					"-l\"YYCache\"",
+					"-l\"YYCategories\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bluemoon.sfa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = dev_cn.com.bluemoon.sfa_20181227;
@@ -750,13 +977,125 @@
 			baseConfigurationReference = FC2128F99CD7DADB6047ABDF /* Pods-SVGManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Li Chao (BTTHBUB23E)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREFIX_HEADER = SVGManager/PrefixHeader.pch;
+				GENERATE_MASTER_OBJECT_FILE = NO;
 				INFOPLIST_FILE = SVGManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SVGManager/Source/Lib/SDK",
+				);
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AVOSCloud\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AVOSCloudIM\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/BlocksKit\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/CocoaLumberjack\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/FLAnimatedImage\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/LBPhotoBrowser\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MKNetworkKit\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MMDrawerController\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/WMPageController\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/XXNibBridge\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YYCategories\"",
+					"-enable-allobf",
+					"\"$(SRCROOT)/SVGManager/Source/Lib/SDK/TLPhotoPicker-v1.23.a\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AVOSCloud\"",
+					"-l\"AVOSCloudIM\"",
+					"-l\"BlocksKit\"",
+					"-l\"CocoaLumberjack\"",
+					"-l\"FLAnimatedImage\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"LBPhotoBrowser\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"MKNetworkKit\"",
+					"-l\"MMDrawerController\"",
+					"-l\"Masonry\"",
+					"-l\"Reachability\"",
+					"-l\"SDWebImage\"",
+					"-l\"WMPageController\"",
+					"-l\"XXNibBridge\"",
+					"-l\"YYCache\"",
+					"-l\"YYCategories\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreImage\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bluemoon.sfa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = dev_cn.com.bluemoon.sfa_20181227;

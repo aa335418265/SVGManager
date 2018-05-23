@@ -80,8 +80,17 @@
 }
 
 - (void)unArchive {
-    self.likedDict = [(NSMutableDictionary *)[self.cache objectForKey:@"likedDict"] mutableCopy];
-    self.collectedDict = [(NSMutableDictionary *)[self.cache objectForKey:@"collectedDict"] mutableCopy];
+    NSMutableDictionary *likedDict = (NSMutableDictionary *)[self.cache objectForKey:@"likedDict"] ;
+    if (likedDict) {
+        self.likedDict = [NSMutableDictionary dictionaryWithDictionary:likedDict];
+    }
+    
+    NSMutableDictionary  *collectedDict = (NSMutableDictionary *)[self.cache objectForKey:@"collectedDict"];
+    if (collectedDict) {
+        self.collectedDict = [NSMutableDictionary dictionaryWithDictionary:collectedDict];
+    }
 }
+
+
 
 @end

@@ -13,6 +13,7 @@
 #import "LeftViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "W20WebVC.h"
+#import "TLPhotoPicker.h"
 
 
 NSString *const clientKey = @"fWv9fBxGPpfFUpnctBVudGfc";
