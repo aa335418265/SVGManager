@@ -28,7 +28,7 @@
 @property(nonatomic, retain) UIColor *navBarColor;
 @property(nonatomic, retain) UIColor *colorClear;
 
-
+@property(nonatomic, retain) NSString *adurl;
 
 // 是否是夜间 YES表示夜间, NO为正常
 @property(nonatomic, assign) BOOL isNight;

