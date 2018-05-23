@@ -19,6 +19,7 @@
     self = [super initWithStyle: style reuseIdentifier:reuseIdentifier];
     if (self) {
         self = (LeftMuneCell *)[[[NSBundle mainBundle] loadNibNamed:@"LeftMuneCell" owner:self options:nil] firstObject];
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:ThemeManageChangeNotification object:nil];
     return self;

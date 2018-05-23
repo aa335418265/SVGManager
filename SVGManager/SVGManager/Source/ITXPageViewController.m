@@ -23,12 +23,15 @@
     self.menuView.style = WMMenuViewStyleDefault;
     self.menuView.layoutMode = WMMenuViewLayoutModeCenter;
     self.menuView.backgroundColor = [UIColor clearColor];
+
     
-    
+    self.navigationController.navigationBar.translucent = NO;
+
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu2"] style:UIBarButtonItemStylePlain target:self action:@selector(leftBtn)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"light"] style:UIBarButtonItemStylePlain target:self action:@selector(rightBtn)];
-     self.navigationItem.rightBarButtonItem.tintColor = [UIColor blackColor];
-    self.navigationItem.leftBarButtonItem.tintColor = [UIColor blackColor];
+     self.navigationItem.rightBarButtonItem.tintColor = [UIColor colorWithHexString:@"1296db"];
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor colorWithHexString:@"1296db"];
+    [self themeChange];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:ThemeManageChangeNotification object:nil];
     
 }
@@ -38,11 +41,11 @@
 }
 - (void)themeChange  {
     if ([ThemeManage shareThemeManage].isNight) {
-        self.titleColorNormal = [UIColor redColor];
-        self.titleColorSelected = [UIColor lightGrayColor];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"example"] forBarMetrics:0];
+        self.navigationItem.rightBarButtonItem.image = [UIImage imageNamed:@"night"];
     }else{
-        self.titleColorNormal = [UIColor blackColor];
-        self.titleColorSelected = [UIColor redColor];
+        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:0];
+        self.navigationItem.rightBarButtonItem.image = [UIImage imageNamed:@"light"];
     }
     
 }
@@ -50,13 +53,8 @@
 {
 
     [ThemeManage shareThemeManage].isNight = ![ThemeManage shareThemeManage].isNight;
-    if ([ThemeManage shareThemeManage].isNight) {
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"example"] forBarMetrics:0];
-        self.navigationItem.rightBarButtonItem.image = [UIImage imageNamed:@"night"];
-    }else{
-        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]] forBarMetrics:0];
-        self.navigationItem.rightBarButtonItem.image = [UIImage imageNamed:@"light"];
-    }
+    [self themeChange];
+
 }
 -(void)leftBtn{
     //这里的话是通过遍历循环拿到之前在AppDelegate中声明的那个MMDrawerController属性，然后判断是否为打开状态，如果是就关闭，否就是打开(初略解释，里面还有一些条件)
@@ -66,7 +64,7 @@
 
 - (NSArray *)titleData {
     if (!_titleData) {
-        _titleData = @[@"趣图", @"笑话", @"随机"];
+        _titleData = @[@"乐图", @"笑话", @"随机"];
     }
     return _titleData;
 }

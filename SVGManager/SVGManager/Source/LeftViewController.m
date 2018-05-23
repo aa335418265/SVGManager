@@ -15,6 +15,7 @@
 @interface LeftViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *data;
+@property (nonatomic, strong) UIImageView *headerView;
 @end
 
 @implementation LeftViewController
@@ -29,9 +30,14 @@
     
     _tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
     _tableView.backgroundColor = [UIColor clearColor];
-    UIImageView *headerView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    headerView.image = [UIImage imageNamed:@"joke"];
-    _tableView.tableHeaderView = headerView;
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 240)];
+    UIImageView *iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 40, 200, 200)];
+    iconImageView.image = [UIImage imageNamed:@"le"];
+    [view addSubview:iconImageView];
+
+    
+    _tableView.tableHeaderView = view;
+    self.headerView = iconImageView;
     [self themeChange];
     _tableView.tableFooterView = [UIView new];
     _tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
@@ -55,8 +61,16 @@
     UIImageView *bgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     self.tableView.backgroundView=bgView;
     [bgView setImageToBlur:[ThemeManage shareThemeManage].tableViewbgImage blurRadius:kLBBlurredImageDefaultBlurRadius completionBlock:nil];
+    if ([ThemeManage shareThemeManage].isNight) {
+        self.headerView.alpha = 0.75;
+    }
+    else{
+        self.headerView.alpha = 1;
+    }
     
 }
+
+
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

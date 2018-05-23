@@ -13,6 +13,10 @@ NSString  * ThemeManageChangeNotification = @"themeManageChangeNotification";
 
 static ThemeManage *themeManage; // 单例
 
+@interface ThemeManage()
+
+@property (nonatomic, strong) YYCache *cache; ///< huancun
+@end
 @implementation ThemeManage
 
 #pragma mark - 单例的初始化
@@ -22,6 +26,9 @@ static ThemeManage *themeManage; // 单例
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         themeManage = [[ThemeManage alloc] init];
+        themeManage.cache = [YYCache cacheWithName:@"ThemeManageCache"];
+        id object =[themeManage.cache objectForKey:@"isNight"] ;
+        themeManage.isNight = [object boolValue];
     });
     return themeManage;
 }
@@ -40,17 +47,16 @@ static ThemeManage *themeManage; // 单例
         self.collectedImage =[UIImage imageNamed:@"collected2"];
 
     } else{
-        
+
         self.tableViewbgImage = [UIImage imageWithColor:[UIColor whiteColor]];
         self.contentColor = [UIColor darkGrayColor];
         self.likedImage =[UIImage imageNamed:@"liked"];
         self.collectedImage =[UIImage imageNamed:@"collected"];
-        
-
     }
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:ThemeManageChangeNotification object:nil];
 
+    [[NSNotificationCenter defaultCenter] postNotificationName:ThemeManageChangeNotification object:nil];
+    
+    [themeManage.cache setObject:@(isNight) forKey:@"isNight"];
 
 }
 

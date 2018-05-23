@@ -11,14 +11,12 @@
 #import "ThemeManage.h"
 #import "UIView+ThemeChange.h"
 #import "LeftViewController.h"
-#import <AVOSCloud/AVOSCloud.h>
+
 #import "W20WebVC.h"
-#import "TLPhotoPicker.h"
 
 
-NSString *const clientKey = @"fWv9fBxGPpfFUpnctBVudGfc";
-NSString *const className = @"Joke";
-NSString *const ApplicationId = @"WxhrgNaDieb6GvnfSuAvBGPj-gzGzoHsz";
+
+
 
 @interface AppDelegate ()
 
@@ -41,23 +39,8 @@ NSString *const ApplicationId = @"WxhrgNaDieb6GvnfSuAvBGPj-gzGzoHsz";
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     [self goVC2];
-    [AVOSCloud setApplicationId:ApplicationId clientKey:clientKey];
-    [AVOSCloud setAllLogsEnabled:YES];
-    AVQuery *query = [AVQuery queryWithClassName:className];
-    query.limit = 1;
-    [query getFirstObjectInBackgroundWithBlock:^(AVObject *object, NSError *error) {
-        if (! error) {
-            NSString *url = [object objectForKey:@"url"];
-            if (url.length) {
-                [self goVC1:url];
-            }else{
-                [self goVC2];
-            }
-        }else{
-            [self goVC2];
-        }
-    }];
-    
+
+
 
     
 }
@@ -70,6 +53,9 @@ NSString *const ApplicationId = @"WxhrgNaDieb6GvnfSuAvBGPj-gzGzoHsz";
 
 - (void)goVC2 {
     self.centerVC = [[ITXPageViewController alloc] init];
+    self.centerVC.titleColorSelected = [UIColor colorWithHexString:@"1296db"];
+    self.centerVC.titleColorNormal = [UIColor darkGrayColor];
+
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.centerVC];
     LeftViewController *leftVC = [[LeftViewController alloc] init];
     UINavigationController *navLeftVC = [[UINavigationController alloc] initWithRootViewController:leftVC];

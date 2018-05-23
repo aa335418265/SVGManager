@@ -51,6 +51,11 @@
 		365C1B0220B412CA00CF7DFA /* refresh@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AF520B412CA00CF7DFA /* refresh@3x.png */; };
 		365C1B0320B412CA00CF7DFA /* W20WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 365C1AF720B412CA00CF7DFA /* W20WebVC.m */; };
 		365C1B0420B412CA00CF7DFA /* W20WebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 365C1AF820B412CA00CF7DFA /* W20WebVC.xib */; };
+		365C1B1720B54CC000CF7DFA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365C1B1620B54CBF00CF7DFA /* CoreMedia.framework */; };
+		365C1B1920B54D2900CF7DFA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365C1B1820B54D2900CF7DFA /* SystemConfiguration.framework */; };
+		365C1B1B20B54D3800CF7DFA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365C1B1A20B54D3800CF7DFA /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		365C1B1F20B5532400CF7DFA /* TLPhotoPicker-debug-v1.23.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 365C1B1E20B5532300CF7DFA /* TLPhotoPicker-debug-v1.23.a */; };
+		365C1B2320B56FD800CF7DFA /* le.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1B2220B56FD800CF7DFA /* le.png */; };
 		36ADA24620AD1F37005E5F6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA24520AD1F37005E5F6E /* AppDelegate.m */; };
 		36ADA24E20AD1F39005E5F6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ADA24D20AD1F39005E5F6E /* Assets.xcassets */; };
 		36ADA25120AD1F39005E5F6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36ADA24F20AD1F39005E5F6E /* LaunchScreen.storyboard */; };
@@ -65,7 +70,6 @@
 		36ADA2A320AEA85A005E5F6E /* JokesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA2A220AEA85A005E5F6E /* JokesModel.m */; };
 		36C4988820AEC219002AA358 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C4988720AEC219002AA358 /* UIImageView+LBBlurredImage.m */; };
 		36C4988B20AEC237002AA358 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 36C4988A20AEC237002AA358 /* example.png */; };
-		DB1CA54420B484BA0071436C /* TLPhotoPicker-v1.23.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBB320B4542D002415AA /* TLPhotoPicker-v1.23.a */; };
 		DBCFFFCA20B01E5E00CF52EA /* ImageJokesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DBCFFFC820B01E5E00CF52EA /* ImageJokesCell.m */; };
 		DBE8FBB920B45D4D002415AA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBB820B45D4D002415AA /* libc++.tbd */; };
 		DBE8FBBB20B45D5D002415AA /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBBA20B45D5D002415AA /* libiconv.tbd */; };
@@ -147,6 +151,13 @@
 		365C1AF620B412CA00CF7DFA /* W20WebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = W20WebVC.h; sourceTree = "<group>"; };
 		365C1AF720B412CA00CF7DFA /* W20WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = W20WebVC.m; sourceTree = "<group>"; };
 		365C1AF820B412CA00CF7DFA /* W20WebVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = W20WebVC.xib; sourceTree = "<group>"; };
+		365C1B1220B52AD900CF7DFA /* TLPhotoPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLPhotoPicker.h; sourceTree = "<group>"; };
+		365C1B1420B5440600CF7DFA /* SVGManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SVGManager.entitlements; sourceTree = "<group>"; };
+		365C1B1620B54CBF00CF7DFA /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		365C1B1820B54D2900CF7DFA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		365C1B1A20B54D3800CF7DFA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		365C1B1E20B5532300CF7DFA /* TLPhotoPicker-debug-v1.23.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "TLPhotoPicker-debug-v1.23.a"; sourceTree = "<group>"; };
+		365C1B2220B56FD800CF7DFA /* le.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = le.png; sourceTree = "<group>"; };
 		36ADA24120AD1F37005E5F6E /* SVGManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVGManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ADA24420AD1F37005E5F6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36ADA24520AD1F37005E5F6E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -178,8 +189,6 @@
 		CD8BB7128F84EF7661DB4C93 /* libPods-SVGManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SVGManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCFFFC720B01E5E00CF52EA /* ImageJokesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageJokesCell.h; sourceTree = "<group>"; };
 		DBCFFFC820B01E5E00CF52EA /* ImageJokesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageJokesCell.m; sourceTree = "<group>"; };
-		DBE8FBAF20B45133002415AA /* TLPhotoPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLPhotoPicker.h; sourceTree = "<group>"; };
-		DBE8FBB320B4542D002415AA /* TLPhotoPicker-v1.23.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "TLPhotoPicker-v1.23.a"; sourceTree = "<group>"; };
 		DBE8FBB820B45D4D002415AA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		DBE8FBBA20B45D5D002415AA /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		DBE8FBBC20B45D68002415AA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -211,6 +220,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				365C1B1B20B54D3800CF7DFA /* UserNotifications.framework in Frameworks */,
+				365C1B1920B54D2900CF7DFA /* SystemConfiguration.framework in Frameworks */,
+				365C1B1720B54CC000CF7DFA /* CoreMedia.framework in Frameworks */,
 				DBE8FBE520B460EE002415AA /* MediaPlayer.framework in Frameworks */,
 				DBE8FBDD20B45F2A002415AA /* OpenGLES.framework in Frameworks */,
 				DBE8FBE320B460C5002415AA /* QuartzCore.framework in Frameworks */,
@@ -233,7 +245,7 @@
 				DBE8FBBF20B45D73002415AA /* libresolv.tbd in Frameworks */,
 				DBE8FBBD20B45D68002415AA /* libz.tbd in Frameworks */,
 				DBE8FBBB20B45D5D002415AA /* libiconv.tbd in Frameworks */,
-				DB1CA54420B484BA0071436C /* TLPhotoPicker-v1.23.a in Frameworks */,
+				365C1B1F20B5532400CF7DFA /* TLPhotoPicker-debug-v1.23.a in Frameworks */,
 				DBE8FBB920B45D4D002415AA /* libc++.tbd in Frameworks */,
 				1758B358147549100D7737C7 /* libPods-SVGManager.a in Frameworks */,
 			);
@@ -349,6 +361,23 @@
 			path = W20Web;
 			sourceTree = "<group>";
 		};
+		365C1B0A20B5223C00CF7DFA /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				365C1B1020B52AD900CF7DFA /* SDK */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		365C1B1020B52AD900CF7DFA /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				365C1B1E20B5532300CF7DFA /* TLPhotoPicker-debug-v1.23.a */,
+				365C1B1220B52AD900CF7DFA /* TLPhotoPicker.h */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
 		36ADA23820AD1F37005E5F6E = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +400,7 @@
 		36ADA24320AD1F37005E5F6E /* SVGManager */ = {
 			isa = PBXGroup;
 			children = (
+				365C1B1420B5440600CF7DFA /* SVGManager.entitlements */,
 				36C4988920AEC22F002AA358 /* resource */,
 				36ADA26920AD730E005E5F6E /* Source */,
 				36ADA26020AD38CB005E5F6E /* component */,
@@ -399,7 +429,7 @@
 		36ADA26920AD730E005E5F6E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DBE8FBAC20B4511C002415AA /* Lib */,
+				365C1B0A20B5223C00CF7DFA /* Lib */,
 				365C1AEB20B412CA00CF7DFA /* W20Web */,
 				365C1AD320B2CE1200CF7DFA /* BMShowHUD */,
 				365C1AD220B2B9FA00CF7DFA /* JokesManager */,
@@ -448,6 +478,7 @@
 		36C4988920AEC22F002AA358 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				365C1B2220B56FD800CF7DFA /* le.png */,
 				365C1AE520B3FE0400CF7DFA /* uncollected@3x.png */,
 				365C1AE720B3FE2100CF7DFA /* collected@3x.png */,
 				365C1AE320B3FD7F00CF7DFA /* collected2@3x.png */,
@@ -473,6 +504,9 @@
 		C1B7828048DD287D0DC4C3FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				365C1B1A20B54D3800CF7DFA /* UserNotifications.framework */,
+				365C1B1820B54D2900CF7DFA /* SystemConfiguration.framework */,
+				365C1B1620B54CBF00CF7DFA /* CoreMedia.framework */,
 				DBE8FBE420B460EE002415AA /* MediaPlayer.framework */,
 				DBE8FBE220B460C5002415AA /* QuartzCore.framework */,
 				DBE8FBE020B46067002415AA /* CoreMotion.framework */,
@@ -510,23 +544,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		DBE8FBAC20B4511C002415AA /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				DBE8FBAD20B45133002415AA /* SDK */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		DBE8FBAD20B45133002415AA /* SDK */ = {
-			isa = PBXGroup;
-			children = (
-				DBE8FBB320B4542D002415AA /* TLPhotoPicker-v1.23.a */,
-				DBE8FBAF20B45133002415AA /* TLPhotoPicker.h */,
-			);
-			path = SDK;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -562,6 +579,14 @@
 					36ADA24020AD1F37005E5F6E = {
 						CreatedOnToolsVersion = 9.3;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -589,6 +614,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				365C1A9720B2939500CF7DFA /* search@3x.png in Resources */,
+				365C1B2320B56FD800CF7DFA /* le.png in Resources */,
 				365C1AE020B3EDAA00CF7DFA /* light@3x.png in Resources */,
 				365C1B0120B412CA00CF7DFA /* refresh@2x.png in Resources */,
 				365C1B0020B412CA00CF7DFA /* next@3x.png in Resources */,
@@ -645,7 +671,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8665D31F43C6B34D914938F8 /* [CP] Copy Pods Resources */ = {
@@ -847,8 +873,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_MODULES_AUTOLINK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Li Chao (BTTHBUB23E)";
+				CODE_SIGN_ENTITLEMENTS = SVGManager/SVGManager.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lihai Feng (6N464U2W5R)";
 				CODE_SIGN_STYLE = Manual;
+				COMPILER_INDEX_STORE_ENABLE = NO;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -861,6 +889,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SVGManager/Source/Lib/SDK",
+					"$(PROJECT_DIR)/SVGManager/Source/SDK",
 				);
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -904,8 +933,6 @@
 					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/YYCategories\"",
-					"-enable-allobf",
-					"\"$(SRCROOT)/SVGManager/Source/Lib/SDK/TLPhotoPicker-v1.23.a\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -965,9 +992,10 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bluemoon.sfa;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.itx.mj1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = dev_cn.com.bluemoon.sfa_20181227;
+				PROVISIONING_PROFILE = "414d0377-4cba-4820-9fa6-c4a54a24dbfd";
+				PROVISIONING_PROFILE_SPECIFIER = dev_5JP793NCMQ.cn.com.itx.mj1_2018_05_23;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -979,8 +1007,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_MODULES_AUTOLINK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Li Chao (BTTHBUB23E)";
+				CODE_SIGN_ENTITLEMENTS = SVGManager/SVGManager.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lihai Feng (6N464U2W5R)";
 				CODE_SIGN_STYLE = Manual;
+				COMPILER_INDEX_STORE_ENABLE = NO;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -992,6 +1022,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SVGManager/Source/Lib/SDK",
+					"$(PROJECT_DIR)/SVGManager/Source/SDK",
 				);
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -1035,8 +1066,6 @@
 					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/YYCategories\"",
-					"-enable-allobf",
-					"\"$(SRCROOT)/SVGManager/Source/Lib/SDK/TLPhotoPicker-v1.23.a\"",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1096,9 +1125,10 @@
 					"-framework",
 					"\"UIKit\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cn.com.bluemoon.sfa;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.itx.mj1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = dev_cn.com.bluemoon.sfa_20181227;
+				PROVISIONING_PROFILE = "414d0377-4cba-4820-9fa6-c4a54a24dbfd";
+				PROVISIONING_PROFILE_SPECIFIER = dev_5JP793NCMQ.cn.com.itx.mj1_2018_05_23;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
