@@ -56,6 +56,11 @@
 		365C1B1B20B54D3800CF7DFA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365C1B1A20B54D3800CF7DFA /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		365C1B1F20B5532400CF7DFA /* TLPhotoPicker-debug-v1.23.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 365C1B1E20B5532300CF7DFA /* TLPhotoPicker-debug-v1.23.a */; };
 		365C1B2320B56FD800CF7DFA /* le.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1B2220B56FD800CF7DFA /* le.png */; };
+		365C1B2520B5933500CF7DFA /* LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1B2420B5933500CF7DFA /* LOGO.png */; };
+		365C1B2720B5940100CF7DFA /* 1242.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1B2620B5940100CF7DFA /* 1242.png */; };
+		365C1B2920B599FE00CF7DFA /* s@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1B2820B599FE00CF7DFA /* s@3x.png */; };
+		365C1B2B20B59C3E00CF7DFA /* le2.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1B2A20B59C3E00CF7DFA /* le2.png */; };
+		365C1B2F20B59DA800CF7DFA /* 600@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1B2E20B59DA800CF7DFA /* 600@3x.png */; };
 		36ADA24620AD1F37005E5F6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA24520AD1F37005E5F6E /* AppDelegate.m */; };
 		36ADA24E20AD1F39005E5F6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ADA24D20AD1F39005E5F6E /* Assets.xcassets */; };
 		36ADA25120AD1F39005E5F6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36ADA24F20AD1F39005E5F6E /* LaunchScreen.storyboard */; };
@@ -158,6 +163,11 @@
 		365C1B1A20B54D3800CF7DFA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		365C1B1E20B5532300CF7DFA /* TLPhotoPicker-debug-v1.23.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "TLPhotoPicker-debug-v1.23.a"; sourceTree = "<group>"; };
 		365C1B2220B56FD800CF7DFA /* le.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = le.png; sourceTree = "<group>"; };
+		365C1B2420B5933500CF7DFA /* LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGO.png; sourceTree = "<group>"; };
+		365C1B2620B5940100CF7DFA /* 1242.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1242.png; sourceTree = "<group>"; };
+		365C1B2820B599FE00CF7DFA /* s@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s@3x.png"; sourceTree = "<group>"; };
+		365C1B2A20B59C3E00CF7DFA /* le2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = le2.png; sourceTree = "<group>"; };
+		365C1B2E20B59DA800CF7DFA /* 600@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "600@3x.png"; sourceTree = "<group>"; };
 		36ADA24120AD1F37005E5F6E /* SVGManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVGManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ADA24420AD1F37005E5F6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36ADA24520AD1F37005E5F6E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -478,6 +488,11 @@
 		36C4988920AEC22F002AA358 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				365C1B2E20B59DA800CF7DFA /* 600@3x.png */,
+				365C1B2A20B59C3E00CF7DFA /* le2.png */,
+				365C1B2820B599FE00CF7DFA /* s@3x.png */,
+				365C1B2620B5940100CF7DFA /* 1242.png */,
+				365C1B2420B5933500CF7DFA /* LOGO.png */,
 				365C1B2220B56FD800CF7DFA /* le.png */,
 				365C1AE520B3FE0400CF7DFA /* uncollected@3x.png */,
 				365C1AE720B3FE2100CF7DFA /* collected@3x.png */,
@@ -614,19 +629,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				365C1A9720B2939500CF7DFA /* search@3x.png in Resources */,
+				365C1B2920B599FE00CF7DFA /* s@3x.png in Resources */,
 				365C1B2320B56FD800CF7DFA /* le.png in Resources */,
 				365C1AE020B3EDAA00CF7DFA /* light@3x.png in Resources */,
 				365C1B0120B412CA00CF7DFA /* refresh@2x.png in Resources */,
 				365C1B0020B412CA00CF7DFA /* next@3x.png in Resources */,
+				365C1B2B20B59C3E00CF7DFA /* le2.png in Resources */,
 				36ADA25120AD1F39005E5F6E /* LaunchScreen.storyboard in Resources */,
 				365C1AB420B2A35000CF7DFA /* AboutUsViewController.xib in Resources */,
 				365C1A9520B292B400CF7DFA /* menu2@3x.png in Resources */,
+				365C1B2F20B59DA800CF7DFA /* 600@3x.png in Resources */,
 				365C1AFD20B412CA00CF7DFA /* home@2x.png in Resources */,
 				365C1AE420B3FD7F00CF7DFA /* collected2@3x.png in Resources */,
+				365C1B2520B5933500CF7DFA /* LOGO.png in Resources */,
 				365C1AFF20B412CA00CF7DFA /* next@2x.png in Resources */,
 				365C1AC020B2A3A100CF7DFA /* CelanCacheViewController.xib in Resources */,
 				36C4988B20AEC237002AA358 /* example.png in Resources */,
 				365C1A9320B2926600CF7DFA /* menu@3x.png in Resources */,
+				365C1B2720B5940100CF7DFA /* 1242.png in Resources */,
 				365C1B0420B412CA00CF7DFA /* W20WebVC.xib in Resources */,
 				36ADA24E20AD1F39005E5F6E /* Assets.xcassets in Resources */,
 				365C1A8120B26CE300CF7DFA /* placeholder@3x.png in Resources */,

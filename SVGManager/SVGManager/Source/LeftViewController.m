@@ -32,7 +32,7 @@
     _tableView.backgroundColor = [UIColor clearColor];
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 240)];
     UIImageView *iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 40, 200, 200)];
-    iconImageView.image = [UIImage imageNamed:@"le"];
+    iconImageView.image = [UIImage imageNamed:@"le2"];
     [view addSubview:iconImageView];
 
     

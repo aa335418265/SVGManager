@@ -21,35 +21,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="le.png" translatesAutoresizingMaskIntoConstraints="NO" id="nXm-4Z-qel">
-                                <rect key="frame" x="27" y="173.5" width="320" height="320"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="8lW-Gc-Brj"/>
-                                    <constraint firstAttribute="width" constant="320" id="SVw-SU-Tjj"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="创造快乐，轻松生活" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0k7-hI-TJv">
-                                <rect key="frame" x="132" y="644" width="111" height="15"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.75686274509999996" green="0.75686274509999996" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="创造快乐，享受生活" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JN-Kg-yMW">
+                                <rect key="frame" x="60" y="140" width="255.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
+                                <color key="textColor" red="0.10196078431372549" green="0.27058823529411763" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s.png" translatesAutoresizingMaskIntoConstraints="NO" id="rdt-kq-TyK">
+                                <rect key="frame" x="87" y="213.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="8rC-tH-eba"/>
+                                    <constraint firstAttribute="width" constant="200" id="Fhl-g4-haJ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="nXm-4Z-qel" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="CiB-m6-nt6"/>
-                            <constraint firstItem="0k7-hI-TJv" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="P1P-Xl-dMm"/>
-                            <constraint firstItem="nXm-4Z-qel" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cYp-mn-IOV"/>
-                            <constraint firstItem="zGO-Em-QrD" firstAttribute="top" secondItem="0k7-hI-TJv" secondAttribute="bottom" constant="8" id="dyA-Cq-Yhl"/>
+                            <constraint firstItem="rdt-kq-TyK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Yge-el-zTy"/>
+                            <constraint firstItem="2JN-Kg-yMW" firstAttribute="top" secondItem="iDK-rb-kHi" secondAttribute="bottom" constant="120" id="aOu-Zw-OOY"/>
+                            <constraint firstItem="2JN-Kg-yMW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mKo-fq-Vwi"/>
+                            <constraint firstItem="rdt-kq-TyK" firstAttribute="top" secondItem="2JN-Kg-yMW" secondAttribute="bottom" constant="40" id="y6a-73-uLq"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
     <resources>
-        <image name="le.png" width="1024" height="1024"/>
+        <image name="s.png" width="200" height="200"/>
     </resources>
 </document>

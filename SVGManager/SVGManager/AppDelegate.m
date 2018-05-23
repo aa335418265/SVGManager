@@ -53,7 +53,7 @@
 
 - (void)goVC2 {
     self.centerVC = [[ITXPageViewController alloc] init];
-    self.centerVC.titleColorSelected = [UIColor colorWithHexString:@"1296db"];
+    self.centerVC.titleColorSelected = [UIColor colorWithHexString:@"1A4568"];
     self.centerVC.titleColorNormal = [UIColor darkGrayColor];
 
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.centerVC];
