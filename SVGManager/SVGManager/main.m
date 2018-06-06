@@ -16,12 +16,14 @@ NSString *const ApplicationId = @"WxhrgNaDieb6GvnfSuAvBGPj-gzGzoHsz";
 extern void hikari_fla(void);
 extern void hikari_strenc(void);
 extern void hikari_bcf(void);
+extern void hikari_fco(void);
 int main(int argc, char * argv[]) {
     @autoreleasepool {
         
-        hikari_fla();
-        hikari_strenc();
-        hikari_bcf();
+//        hikari_fla();
+//        hikari_strenc();
+//        hikari_bcf();
+//        hikari_fco();
         NSDictionary *info =@{
                               kJPushKey: @"3e766f72baf7c9915729a3cd", // 极光推送key
                               kJPushChanel: @"App Store", // 极光推送channel字符串

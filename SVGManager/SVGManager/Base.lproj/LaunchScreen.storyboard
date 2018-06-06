@@ -27,7 +27,7 @@
                                 <color key="textColor" red="0.10196078431372549" green="0.27058823529411763" blue="0.40784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="s.png" translatesAutoresizingMaskIntoConstraints="NO" id="rdt-kq-TyK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="le.png" translatesAutoresizingMaskIntoConstraints="NO" id="rdt-kq-TyK">
                                 <rect key="frame" x="87" y="213.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="8rC-tH-eba"/>
@@ -50,6 +50,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="s.png" width="200" height="200"/>
+        <image name="le.png" width="1024" height="1024"/>
     </resources>
 </document>
