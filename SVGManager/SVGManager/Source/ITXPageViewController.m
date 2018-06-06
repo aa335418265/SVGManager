@@ -29,8 +29,8 @@
 
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu2"] style:UIBarButtonItemStylePlain target:self action:@selector(leftBtn)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"light"] style:UIBarButtonItemStylePlain target:self action:@selector(rightBtn)];
-     self.navigationItem.rightBarButtonItem.tintColor = [UIColor colorWithHexString:@"1A4568"];
-    self.navigationItem.leftBarButtonItem.tintColor = [UIColor colorWithHexString:@"1A4568"];
+     self.navigationItem.rightBarButtonItem.tintColor = [UIColor colorWithHexString:@"1296db"];
+    self.navigationItem.leftBarButtonItem.tintColor = [UIColor colorWithHexString:@"1296db"];
     [self themeChange];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeChange) name:ThemeManageChangeNotification object:nil];
     

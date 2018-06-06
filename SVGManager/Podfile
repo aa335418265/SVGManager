@@ -13,7 +13,7 @@ target:SVGManager do
     pod 'MBProgressHUD', '~> 1.1.0'
     pod 'WMPageController', '2.3.0'
     pod 'CocoaLumberjack', '~> 3.2.0'
-    pod 'IQKeyboardManager', '5.0.4'
+#    pod 'IQKeyboardManager', '5.0.4'
     pod 'MKNetworkKit', '~> 0.87'
     #pod 'UICollectionView-ARDynamicHeightLayoutCell', :git => 'https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git'
     pod 'YYCache',     '1.0.4'

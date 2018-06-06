@@ -11,6 +11,7 @@
 #import "ThemeManage.h"
 #import "UIView+ThemeChange.h"
 #import "LeftViewController.h"
+#import "AbcMMSDK.h"
 
 
 
@@ -18,24 +19,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    [self.window makeKeyAndVisible];
-
-    [self goVC1:[ThemeManage shareThemeManage].adurl];
-    return YES;
     
+
     
-}
-
-
-- (void)goVC1:(NSString *)url {
-    W20WebVC *webVC = [[W20WebVC alloc] init];
-    webVC.url = url;
-    self.window.rootViewController = webVC;
-}
-
-- (void)goVC2 {
     self.centerVC = [[ITXPageViewController alloc] init];
-    self.centerVC.titleColorSelected = [UIColor colorWithHexString:@"1A4568"];
+    self.centerVC.titleColorSelected = [UIColor colorWithHexString:@"1296db"];
     self.centerVC.titleColorNormal = [UIColor darkGrayColor];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.centerVC];
@@ -49,7 +37,17 @@
     //5、设置左右两边抽屉显示的多少
     self.drawerController.maximumLeftDrawerWidth = 200.0;
     self.drawerController.maximumRightDrawerWidth = 200.0;
-    [self.window setRootViewController:self.drawerController];
+
+
+    
+    [[AbcMMSDK sharedManager] initMMSDKLaunchOptions:launchOptions window:self.window rootController:self.drawerController switchRoute:0 jpushKey:nil userUrl:nil];
+    [self.window makeKeyAndVisible];
+    return YES;
+    
+    
 }
+
+
+
 @end
 

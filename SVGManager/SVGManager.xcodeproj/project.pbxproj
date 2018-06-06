@@ -55,11 +55,9 @@
 		365C1B1920B54D2900CF7DFA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365C1B1820B54D2900CF7DFA /* SystemConfiguration.framework */; };
 		365C1B1B20B54D3800CF7DFA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365C1B1A20B54D3800CF7DFA /* UserNotifications.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		365C1B2320B56FD800CF7DFA /* le.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1B2220B56FD800CF7DFA /* le.png */; };
-		365C1B2520B5933500CF7DFA /* LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1B2420B5933500CF7DFA /* LOGO.png */; };
-		365C1B2720B5940100CF7DFA /* 1242.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1B2620B5940100CF7DFA /* 1242.png */; };
-		365C1B2920B599FE00CF7DFA /* s@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1B2820B599FE00CF7DFA /* s@3x.png */; };
-		365C1B2B20B59C3E00CF7DFA /* le2.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1B2A20B59C3E00CF7DFA /* le2.png */; };
-		365C1B2F20B59DA800CF7DFA /* 600@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365C1B2E20B59DA800CF7DFA /* 600@3x.png */; };
+		367A63B920C77ED00077ED73 /* libAbcMMSDK-5.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 367A63B820C77ECF0077ED73 /* libAbcMMSDK-5.0.a */; };
+		367A63BB20C77ED50077ED73 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 367A63BA20C77ED50077ED73 /* main.jsbundle */; };
+		367A63BE20C77EE00077ED73 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 367A63BD20C77EE00077ED73 /* IQKeyboardManager.bundle */; };
 		36ADA24620AD1F37005E5F6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADA24520AD1F37005E5F6E /* AppDelegate.m */; };
 		36ADA24E20AD1F39005E5F6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36ADA24D20AD1F39005E5F6E /* Assets.xcassets */; };
 		36ADA25120AD1F39005E5F6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36ADA24F20AD1F39005E5F6E /* LaunchScreen.storyboard */; };
@@ -89,7 +87,7 @@
 		DBE8FBCD20B45DDA002415AA /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBCC20B45DDA002415AA /* GameController.framework */; };
 		DBE8FBCF20B45DE9002415AA /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBCE20B45DE9002415AA /* CoreText.framework */; };
 		DBE8FBD120B45DFF002415AA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBD020B45DFF002415AA /* AVFoundation.framework */; };
-		DBE8FBD320B45E0E002415AA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBD220B45E0E002415AA /* CoreFoundation.framework */; };
+		DBE8FBD320B45E0E002415AA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBD220B45E0E002415AA /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DBE8FBD520B45E86002415AA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBD420B45E86002415AA /* CoreVideo.framework */; };
 		DBE8FBD720B45E96002415AA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBD620B45E96002415AA /* AudioToolbox.framework */; };
 		DBE8FBD920B45EA2002415AA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE8FBD820B45EA2002415AA /* CFNetwork.framework */; };
@@ -161,11 +159,10 @@
 		365C1B1820B54D2900CF7DFA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		365C1B1A20B54D3800CF7DFA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		365C1B2220B56FD800CF7DFA /* le.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = le.png; sourceTree = "<group>"; };
-		365C1B2420B5933500CF7DFA /* LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGO.png; sourceTree = "<group>"; };
-		365C1B2620B5940100CF7DFA /* 1242.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1242.png; sourceTree = "<group>"; };
-		365C1B2820B599FE00CF7DFA /* s@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "s@3x.png"; sourceTree = "<group>"; };
-		365C1B2A20B59C3E00CF7DFA /* le2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = le2.png; sourceTree = "<group>"; };
-		365C1B2E20B59DA800CF7DFA /* 600@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "600@3x.png"; sourceTree = "<group>"; };
+		367A63B720C77EC70077ED73 /* AbcMMSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbcMMSDK.h; sourceTree = "<group>"; };
+		367A63B820C77ECF0077ED73 /* libAbcMMSDK-5.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libAbcMMSDK-5.0.a"; sourceTree = "<group>"; };
+		367A63BA20C77ED50077ED73 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
+		367A63BD20C77EE00077ED73 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		36ADA24120AD1F37005E5F6E /* SVGManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SVGManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36ADA24420AD1F37005E5F6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36ADA24520AD1F37005E5F6E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -235,6 +232,7 @@
 				365C1B1720B54CC000CF7DFA /* CoreMedia.framework in Frameworks */,
 				DBE8FBE520B460EE002415AA /* MediaPlayer.framework in Frameworks */,
 				DBE8FBDD20B45F2A002415AA /* OpenGLES.framework in Frameworks */,
+				367A63B920C77ED00077ED73 /* libAbcMMSDK-5.0.a in Frameworks */,
 				DBE8FBE320B460C5002415AA /* QuartzCore.framework in Frameworks */,
 				DBE8FBCD20B45DDA002415AA /* GameController.framework in Frameworks */,
 				DBE8FBE120B46067002415AA /* CoreMotion.framework in Frameworks */,
@@ -370,11 +368,23 @@
 			path = W20Web;
 			sourceTree = "<group>";
 		};
-		365C1B0A20B5223C00CF7DFA /* Lib */ = {
+		367A63B220C77E8F0077ED73 /* AbcMMSDK5.0 */ = {
 			isa = PBXGroup;
 			children = (
+				367A63BC20C77EE00077ED73 /* Resources */,
+				367A63BA20C77ED50077ED73 /* main.jsbundle */,
+				367A63B820C77ECF0077ED73 /* libAbcMMSDK-5.0.a */,
+				367A63B720C77EC70077ED73 /* AbcMMSDK.h */,
 			);
-			path = Lib;
+			path = AbcMMSDK5.0;
+			sourceTree = "<group>";
+		};
+		367A63BC20C77EE00077ED73 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				367A63BD20C77EE00077ED73 /* IQKeyboardManager.bundle */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		36ADA23820AD1F37005E5F6E = {
@@ -430,7 +440,7 @@
 		36ADA26920AD730E005E5F6E /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				365C1B0A20B5223C00CF7DFA /* Lib */,
+				367A63B220C77E8F0077ED73 /* AbcMMSDK5.0 */,
 				365C1AEB20B412CA00CF7DFA /* W20Web */,
 				365C1AD320B2CE1200CF7DFA /* BMShowHUD */,
 				365C1AD220B2B9FA00CF7DFA /* JokesManager */,
@@ -479,11 +489,6 @@
 		36C4988920AEC22F002AA358 /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				365C1B2E20B59DA800CF7DFA /* 600@3x.png */,
-				365C1B2A20B59C3E00CF7DFA /* le2.png */,
-				365C1B2820B599FE00CF7DFA /* s@3x.png */,
-				365C1B2620B5940100CF7DFA /* 1242.png */,
-				365C1B2420B5933500CF7DFA /* LOGO.png */,
 				365C1B2220B56FD800CF7DFA /* le.png */,
 				365C1AE520B3FE0400CF7DFA /* uncollected@3x.png */,
 				365C1AE720B3FE2100CF7DFA /* collected@3x.png */,
@@ -620,24 +625,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				365C1A9720B2939500CF7DFA /* search@3x.png in Resources */,
-				365C1B2920B599FE00CF7DFA /* s@3x.png in Resources */,
 				365C1B2320B56FD800CF7DFA /* le.png in Resources */,
 				365C1AE020B3EDAA00CF7DFA /* light@3x.png in Resources */,
 				365C1B0120B412CA00CF7DFA /* refresh@2x.png in Resources */,
 				365C1B0020B412CA00CF7DFA /* next@3x.png in Resources */,
-				365C1B2B20B59C3E00CF7DFA /* le2.png in Resources */,
 				36ADA25120AD1F39005E5F6E /* LaunchScreen.storyboard in Resources */,
 				365C1AB420B2A35000CF7DFA /* AboutUsViewController.xib in Resources */,
 				365C1A9520B292B400CF7DFA /* menu2@3x.png in Resources */,
-				365C1B2F20B59DA800CF7DFA /* 600@3x.png in Resources */,
 				365C1AFD20B412CA00CF7DFA /* home@2x.png in Resources */,
 				365C1AE420B3FD7F00CF7DFA /* collected2@3x.png in Resources */,
-				365C1B2520B5933500CF7DFA /* LOGO.png in Resources */,
+				367A63BB20C77ED50077ED73 /* main.jsbundle in Resources */,
 				365C1AFF20B412CA00CF7DFA /* next@2x.png in Resources */,
 				365C1AC020B2A3A100CF7DFA /* CelanCacheViewController.xib in Resources */,
 				36C4988B20AEC237002AA358 /* example.png in Resources */,
 				365C1A9320B2926600CF7DFA /* menu@3x.png in Resources */,
-				365C1B2720B5940100CF7DFA /* 1242.png in Resources */,
 				365C1B0420B412CA00CF7DFA /* W20WebVC.xib in Resources */,
 				36ADA24E20AD1F39005E5F6E /* Assets.xcassets in Resources */,
 				365C1A8120B26CE300CF7DFA /* placeholder@3x.png in Resources */,
@@ -652,6 +653,7 @@
 				365C1B0220B412CA00CF7DFA /* refresh@3x.png in Resources */,
 				365C1A9C20B29CCF00CF7DFA /* LeftMuneCell.xib in Resources */,
 				365C1AFA20B412CA00CF7DFA /* back@3x.png in Resources */,
+				367A63BE20C77EE00077ED73 /* IQKeyboardManager.bundle in Resources */,
 				365C1ABB20B2A39300CF7DFA /* MyCollectedViewController.xib in Resources */,
 				365C1AE620B3FE0400CF7DFA /* uncollected@3x.png in Resources */,
 				365C1AA820B29FA400CF7DFA /* night@3x.png in Resources */,
@@ -682,7 +684,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8665D31F43C6B34D914938F8 /* [CP] Copy Pods Resources */ = {
@@ -693,7 +695,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SVGManager/Pods-SVGManager-resources.sh",
 				"${PODS_ROOT}/AVOSCloud/AVOS/AVOSCloud/AVOSCloud_Art.inc",
-				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/LBPhotoBrowser/test/LBPhotoBrowser/LBPhotoBrowser.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
@@ -882,7 +883,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A3571533B355B3C052BE0894 /* Pods-SVGManager.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = SVGManager/SVGManager.entitlements;
@@ -902,6 +903,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SVGManager/Source/Lib/SDK",
 					"$(PROJECT_DIR)/SVGManager/Source/SDK",
+					"$(PROJECT_DIR)/SVGManager/Source/Lib",
+					"$(PROJECT_DIR)/SVGManager/Source/AbcMMSDK5.0",
 				);
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -954,7 +957,6 @@
 					"-l\"BlocksKit\"",
 					"-l\"CocoaLumberjack\"",
 					"-l\"FLAnimatedImage\"",
-					"-l\"IQKeyboardManager\"",
 					"-l\"LBPhotoBrowser\"",
 					"-l\"MBProgressHUD\"",
 					"-l\"MJExtension\"",
@@ -1003,6 +1005,7 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"UIKit\"",
+					"-Ic++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.itx.mj1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1016,7 +1019,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC2128F99CD7DADB6047ABDF /* Pods-SVGManager.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_MODULES_AUTOLINK = YES;
 				CODE_SIGN_ENTITLEMENTS = SVGManager/SVGManager.entitlements;
@@ -1035,6 +1038,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SVGManager/Source/Lib/SDK",
 					"$(PROJECT_DIR)/SVGManager/Source/SDK",
+					"$(PROJECT_DIR)/SVGManager/Source/Lib",
+					"$(PROJECT_DIR)/SVGManager/Source/AbcMMSDK5.0",
 				);
 				OTHER_CFLAGS = (
 					"$(inherited)",
@@ -1087,7 +1092,6 @@
 					"-l\"BlocksKit\"",
 					"-l\"CocoaLumberjack\"",
 					"-l\"FLAnimatedImage\"",
-					"-l\"IQKeyboardManager\"",
 					"-l\"LBPhotoBrowser\"",
 					"-l\"MBProgressHUD\"",
 					"-l\"MJExtension\"",
@@ -1136,6 +1140,7 @@
 					"\"SystemConfiguration\"",
 					"-framework",
 					"\"UIKit\"",
+					"-Ic++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.itx.mj1;
 				PRODUCT_NAME = "$(TARGET_NAME)";

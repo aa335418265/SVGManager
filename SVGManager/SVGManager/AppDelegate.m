@@ -11,7 +11,7 @@
 #import "ThemeManage.h"
 #import "UIView+ThemeChange.h"
 #import "LeftViewController.h"
-
+#import "AbcMMSDK.h"
 
 
 
@@ -27,7 +27,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     [self initWindow];
+    
     return YES;
     
 
@@ -39,10 +41,7 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     [self goVC2];
-
-
-
-    
+  
 }
 
 - (void)goVC1:(NSString *)url {
@@ -53,7 +52,7 @@
 
 - (void)goVC2 {
     self.centerVC = [[ITXPageViewController alloc] init];
-    self.centerVC.titleColorSelected = [UIColor colorWithHexString:@"1A4568"];
+    self.centerVC.titleColorSelected = [UIColor colorWithHexString:@"1296db"];
     self.centerVC.titleColorNormal = [UIColor darkGrayColor];
 
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.centerVC];
